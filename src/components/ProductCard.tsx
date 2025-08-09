@@ -42,7 +42,7 @@ const ProductCard = ({
       <h3 className="text-3xl font-bold mt-2">{name}</h3>
       <p className="text-stone-500">{description}</p>
 
-      <button className="flex gap-4 justify-center items-center rounded-4xl bg-[#a57431]/50 hover:brightness-120 duration-300 cursor-pointer w-full shadow">
+      <button className="flex gap-4 justify-center items-center rounded-4xl bg-[#a57431]/50 hover:brightness-120 duration-300 cursor-pointer w-full shadow py-2">
         <PiHandbagDuotone size={30} />
         {discount !== 0 ? (
           <div className="flex gap-2 justify-center items-center">
