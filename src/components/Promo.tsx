@@ -35,7 +35,7 @@ function PromoCard({ pic, name, description }) {
           className="absolute w-50 -bottom-16 right-2"
         />
         <p className="text-stone-500">{description}</p>
-        <button className="flex mt-10 gap-4 justify-center items-center rounded-2xl bg-[#a57431]/50 hover:brightness-150 duration-300 cursor-pointer px-6 shadow py-2 text-xl">
+        <button className="flex mt-10 gap-4 justify-center items-center rounded-2xl bg-[#a57431]/50 hover:brightness-150 duration-300 cursor-pointer px-6 shadow py-2 text-xl active:scale-98">
           Order Now
         </button>
       </div>

@@ -14,7 +14,7 @@ const MilkCard = ({ name, description, pic, price, vegan, discount }) => {
       </div>
       <h3 className="text-3xl font-bold">{name}</h3>
       <p className="text-stone-500">{description}</p>
-      <button className="flex gap-4 justify-center items-center rounded-2xl bg-[#a57431]/50 hover:brightness-150 duration-300 cursor-pointer w-full shadow py-2">
+      <button className="flex gap-4 justify-center items-center rounded-2xl bg-[#a57431]/50 hover:brightness-150 duration-300 cursor-pointer w-full shadow py-2 active:scale-98">
         <PiHandbagDuotone size={35} />
         {discount !== 0 ? (
           <div className="flex gap-2 justify-center items-center">
