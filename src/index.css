@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Outfit:wght@100..900&display=swap");
 @import "tailwindcss";
-@plugin "daisyui";
 
 :root {
   font-family: Outfit, Avenir, Helvetica;
