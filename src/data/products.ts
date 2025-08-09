@@ -1,7 +1,7 @@
 const cookies = [
   {
     id: 0,
-    name: "Sugar Cookie",
+    name: "Sugar",
     description:
       "A classic buttery cookie with a sweet, crisp texture and a hint of vanilla.",
     pic: "/media/sugar.png",
@@ -14,20 +14,20 @@ const cookies = [
   },
   {
     id: 1,
-    name: "Chocolate Chips Cookie",
+    name: "Chocolate Chips",
     description:
       "Soft and chewy cookie loaded with rich, melty chocolate chips for the perfect treat.",
     pic: "/media/chips.png",
     price: 12,
     calories: 220,
-    new: true,
+    new: false,
     vegan: false,
     limited: false,
     discount: 0,
   },
   {
     id: 2,
-    name: "Oatmeal Raisin Cookie",
+    name: "Oatmeal Raisin",
     description:
       "Hearty oatmeal cookie studded with sweet raisins and a touch of cinnamon spice.",
     pic: "/media/oatmeal.png",
@@ -40,20 +40,20 @@ const cookies = [
   },
   {
     id: 3,
-    name: "Peanut Butter Cookie",
+    name: "Peanut Butter",
     description:
       "Rich and crumbly peanut butter cookie with a slightly salty balance and classic criss-cross pattern.",
     pic: "/media/pb.png",
     price: 13,
     calories: 250,
-    new: false,
+    new: true,
     vegan: true,
-    limited: false,
+    limited: true,
     discount: 0,
   },
   {
     id: 4,
-    name: "Double Chocolate Cookie",
+    name: "Double Chocolate",
     description:
       "Decadent chocolate cookie with cocoa powder and chunks of dark and milk chocolate.",
     pic: "/media/double.png",
@@ -87,12 +87,12 @@ const cookies = [
     calories: 210,
     new: false,
     vegan: false,
-    limited: true,
+    limited: false,
     discount: 0,
   },
   {
     id: 7,
-    name: "Gingerbread Cookie",
+    name: "Gingerbread",
     description:
       "Spiced ginger cookie with molasses and warming spices, perfect for festive occasions.",
     pic: "/media/gingerbread.png",
@@ -105,7 +105,7 @@ const cookies = [
   },
   {
     id: 8,
-    name: "Lemon Zest Cookie",
+    name: "Lemon Zest",
     description:
       "Refreshing cookie infused with zesty lemon and a hint of sweetness for a bright flavor.",
     pic: "/media/lemon.png",
@@ -114,19 +114,19 @@ const cookies = [
     new: false,
     vegan: true,
     limited: false,
-    discount: 0,
+    discount: 15,
   },
   {
     id: 9,
-    name: "Smarties® Cookie",
+    name: "Smarties®",
     description:
-      "Chewy cookie made from shredded coconut, sweetened and lightly toasted for a tropical twist.",
+      "Colorful and crunchy candy-coated chocolate pieces baked into a soft, chewy cookie for a playful and sweet treat.",
     pic: "/media/smarties.png",
     price: 13,
     calories: 180,
-    new: false,
+    new: true,
     vegan: false,
-    limited: false,
+    limited: true,
     discount: 0,
   },
   {
@@ -157,13 +157,13 @@ const cookies = [
   },
   {
     id: 12,
-    name: "Ghost Cookie",
+    name: "Ghost",
     description:
       "A spooky-themed sugar cookie with vanilla flavor and festive icing decorations, perfect for Halloween.",
     pic: "/media/ghost.png",
     price: 15,
     calories: 140,
-    new: false,
+    new: true,
     vegan: false,
     limited: true,
     discount: 0,
@@ -176,7 +176,7 @@ const cookies = [
     pic: "/media/double-white.png",
     price: 12,
     calories: 280,
-    new: true,
+    new: false,
     vegan: false,
     limited: false,
     discount: 0,
@@ -196,7 +196,8 @@ const milks = [
   {
     id: 1,
     name: "Skim Milk",
-    description: "Fat-free milk with a light, clean taste.",
+    description:
+      "Fat-free milk with a light, clean taste and natural dairy flavor.",
     pic: "/media/skim.png",
     price: 3,
     vegan: false,
@@ -219,7 +220,7 @@ const milks = [
     pic: "/media/soy.png",
     price: 4,
     vegan: true,
-    discount: 0,
+    discount: 10,
   },
   {
     id: 4,

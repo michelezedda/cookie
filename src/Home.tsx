@@ -13,12 +13,14 @@ const Home = () => {
     <main>
       <Navbar />
       <Hero />
-      <Promo />
-      <NewProducts />
-      <BestSales />
-      <LowCalories />
-      <Vegan />
-      <Milks />
+      <div className="mx-auto max-w-screen-xl">
+        <Promo />
+        <NewProducts />
+        <BestSales />
+        <LowCalories />
+        <Vegan />
+        <Milks />
+      </div>
       <Footer />
     </main>
   );

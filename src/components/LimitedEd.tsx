@@ -1,5 +1,5 @@
 import { cookies } from "../data/products";
-import ProductCard from "./ProductCard";
+import CookieCard from "./CookieCard";
 
 const LimitedEd = () => {
   const limitedCookies = cookies.filter((cookie) => cookie.limited);
@@ -9,7 +9,7 @@ const LimitedEd = () => {
       <h2 className="text-5xl font-[Caprasimo] mb-6">Limited Editions</h2>
       <div className="grid grid-cols-1 gap-35 mt-25">
         {limitedCookies.map((limitedCookie) => (
-          <ProductCard key={limitedCookie.id} {...limitedCookie} />
+          <CookieCard key={limitedCookie.id} {...limitedCookie} />
         ))}
       </div>
     </div>
