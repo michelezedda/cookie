@@ -18,5 +18,4 @@ export type Milk = {
   pic: string;
   price: number;
   vegan: boolean;
-  discount: number;
 };

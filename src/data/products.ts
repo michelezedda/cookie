@@ -132,8 +132,7 @@ const cookies = [
   {
     id: 10,
     name: "Almond Biscotti",
-    description:
-      "Crunchy twice-baked cookie with toasted almonds, ideal for dipping in coffee or tea.",
+    description: "Crunchy twice-baked Italian cookie with toasted almonds",
     pic: "/media/almond-biscotti.png",
     price: 12,
     calories: 80,
@@ -191,7 +190,6 @@ const milks = [
     pic: "/media/whole.png",
     price: 3,
     vegan: false,
-    discount: 0,
   },
   {
     id: 1,
@@ -201,7 +199,6 @@ const milks = [
     pic: "/media/skim.png",
     price: 3,
     vegan: false,
-    discount: 0,
   },
   {
     id: 2,
@@ -210,7 +207,6 @@ const milks = [
     pic: "/media/almond.png",
     price: 4,
     vegan: true,
-    discount: 0,
   },
   {
     id: 3,
@@ -220,7 +216,6 @@ const milks = [
     pic: "/media/soy.png",
     price: 4,
     vegan: true,
-    discount: 10,
   },
   {
     id: 4,
@@ -229,7 +224,6 @@ const milks = [
     pic: "/media/oat.png",
     price: 5,
     vegan: true,
-    discount: 0,
   },
   {
     id: 5,
@@ -238,7 +232,6 @@ const milks = [
     pic: "/media/coconut.png",
     price: 5,
     vegan: true,
-    discount: 20,
   },
 ];
 
