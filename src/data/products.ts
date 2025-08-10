@@ -11,6 +11,7 @@ const cookies = [
     vegan: false,
     limited: false,
     discount: 20,
+    suggested: false,
   },
   {
     id: 1,
@@ -24,6 +25,7 @@ const cookies = [
     vegan: false,
     limited: false,
     discount: 0,
+    suggested: true,
   },
   {
     id: 2,
@@ -37,6 +39,7 @@ const cookies = [
     vegan: true,
     limited: false,
     discount: 0,
+    suggested: false,
   },
   {
     id: 3,
@@ -50,6 +53,7 @@ const cookies = [
     vegan: true,
     limited: true,
     discount: 0,
+    suggested: true,
   },
   {
     id: 4,
@@ -63,6 +67,7 @@ const cookies = [
     vegan: false,
     limited: true,
     discount: 0,
+    suggested: true,
   },
   {
     id: 5,
@@ -76,6 +81,7 @@ const cookies = [
     vegan: false,
     limited: false,
     discount: 0,
+    suggested: false,
   },
   {
     id: 6,
@@ -89,6 +95,7 @@ const cookies = [
     vegan: false,
     limited: false,
     discount: 0,
+    suggested: false,
   },
   {
     id: 7,
@@ -102,6 +109,7 @@ const cookies = [
     vegan: true,
     limited: true,
     discount: 0,
+    suggested: false,
   },
   {
     id: 8,
@@ -115,6 +123,7 @@ const cookies = [
     vegan: true,
     limited: false,
     discount: 15,
+    suggested: false,
   },
   {
     id: 9,
@@ -128,6 +137,7 @@ const cookies = [
     vegan: false,
     limited: true,
     discount: 0,
+    suggested: true,
   },
   {
     id: 10,
@@ -140,6 +150,7 @@ const cookies = [
     vegan: true,
     limited: false,
     discount: 0,
+    suggested: false,
   },
   {
     id: 11,
@@ -153,6 +164,7 @@ const cookies = [
     vegan: false,
     limited: true,
     discount: 0,
+    suggested: false,
   },
   {
     id: 12,
@@ -166,6 +178,7 @@ const cookies = [
     vegan: false,
     limited: true,
     discount: 0,
+    suggested: false,
   },
   {
     id: 13,
@@ -179,6 +192,7 @@ const cookies = [
     vegan: false,
     limited: false,
     discount: 0,
+    suggested: false,
   },
 ];
 

@@ -1,8 +1,8 @@
 const Hero = () => {
   return (
-    <header className="flex justify-center items-center bg-stone-950 w-full pt-30 shadow shadow-stone-950">
+    <header className="flex justify-center items-center w-full mt-40">
       <div className="mx-auto max-w-screen-lg relative">
-        <div className="flex flex-col lg:flex-row m-4 shadow shadow-stone-950">
+        <div className="flex flex-col lg:flex-row m-4">
           <h1 className="text-6xl text-white font-[Caprasimo]">
             Get A <br />
             <span className="ml-10 bg-gradient-to-t from-[#a57431] to-white bg-clip-text text-transparent">

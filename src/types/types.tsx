@@ -9,6 +9,7 @@ export type Cookie = {
   vegan: boolean;
   limited: boolean;
   discount: number;
+  suggested: boolean;
 };
 
 export type Milk = {
