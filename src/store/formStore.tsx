@@ -1,6 +1,7 @@
 import { create } from "zustand";
+import type { FormStore } from "../types/types";
 
-export const useForm = create((set) => ({
+export const useForm = create<FormStore>((set) => ({
   formData: {
     firstName: "",
     lastName: "",

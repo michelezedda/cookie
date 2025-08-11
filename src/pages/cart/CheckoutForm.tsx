@@ -2,6 +2,7 @@ import { locations } from "../../data/locations";
 import { useCart } from "../../store/cartStore";
 import { useForm } from "../../store/formStore";
 import { useNavigate } from "react-router";
+import type { Location } from "../../types/types";
 
 const CheckoutForm = () => {
   const { setSubmitted, formData, setFormData } = useForm();
@@ -9,7 +10,7 @@ const CheckoutForm = () => {
 
   let navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     setOrder(cart);

@@ -1,6 +1,7 @@
 import { useCart } from "../store/cartStore";
+import type { CookieCardProps } from "../types/types";
 
-const CookieCard = ({ cookie }) => {
+const CookieCard = ({ cookie }: CookieCardProps) => {
   const addToCart = useCart((state) => state.addToCart);
 
   return (

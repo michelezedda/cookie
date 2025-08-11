@@ -1,3 +1,14 @@
+export type CartItem = Cookie & { quantity?: number };
+
+export type UserData = {
+  firstName: string;
+  lastName: string;
+  location: string;
+  email: string;
+  phoneNumber: string;
+  date: string;
+};
+
 export type Cookie = {
   id: number;
   name: string;
@@ -12,11 +23,44 @@ export type Cookie = {
   suggested: boolean;
 };
 
-export type Milk = {
+export type Location = {
   id: number;
+  street: string;
+};
+
+export type CartStore = {
+  cart: CartItem[];
+  setCart: (cart: CartItem[]) => void;
+  addToCart: (item: CartItem) => void;
+  cartQuantity: () => number;
+  addQuantity: (itemId: number) => void;
+  removeItem: (itemId: number) => void;
+  order: any[];
+  setOrder: (order: any[]) => void;
+};
+
+export type FormStore = {
+  formData: UserData;
+  setFormData: (formData: UserData) => void;
+  submitted: boolean;
+  setSubmitted: (submitted: boolean) => void;
+};
+
+export type CookieCardProps = {
+  cookie: CartItem;
+};
+
+export type PromoCardProps = {
+  pic: string;
   name: string;
   description: string;
-  pic: string;
-  price: number;
-  vegan: boolean;
+  onClick: () => void;
+};
+
+export type CartCardProps = {
+  cookie: CartItem;
+};
+
+export type SuggestedCardProps = {
+  cookie: CartItem;
 };

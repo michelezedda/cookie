@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const Cart = () => {
   const { cart } = useCart();
-  const [formVisible, setFormVisible] = useState(false);
+  const [formVisible, setFormVisible] = useState<boolean>(false);
 
   return (
     <>
@@ -19,7 +19,7 @@ const Cart = () => {
         </h1>
         <div className="flex flex-col w-full">
           {cart.map((cookie) => (
-            <CartCard key={cookie.id} {...cookie} />
+            <CartCard key={cookie.id} cookie={cookie} />
           ))}
         </div>
         <p className="text-2xl text-end mx-4 mt-6">Total: $</p>

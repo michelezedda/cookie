@@ -1,6 +1,7 @@
 import { create } from "zustand";
+import type { CartStore } from "../types/types";
 
-export const useCart = create((set, get) => ({
+export const useCart = create<CartStore>((set, get) => ({
   cart: [],
   setCart: (cart) => set({ cart }),
   addToCart: (newItem) =>

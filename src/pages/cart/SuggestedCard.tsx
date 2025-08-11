@@ -1,6 +1,7 @@
 import { useCart } from "../../store/cartStore";
+import type { SuggestedCardProps } from "../../types/types";
 
-const SuggestedCard = ({ cookie }) => {
+const SuggestedCard = ({ cookie }: SuggestedCardProps) => {
   const addToCart = useCart((state) => state.addToCart);
   return (
     <div className="relative flex flex-col justify-end items-center text-center bg-stone-950 shadow-lg rounded-4xl p-6 h-50 w-50 gap-3">
