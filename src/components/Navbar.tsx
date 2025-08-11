@@ -13,8 +13,8 @@ const Navbar = () => {
         <div className="fixed top-10 -left-8 bg-stone-950 w-12 h-20 rounded-b-full" />
         <div className="fixed top-6 -left-28 bg-stone-950 w-22 h-20 rotate-50 rounded-b-full" />
         <Link to={"/cart"}>
-          <div className="fixed top-1 -right-28 rounded-full p-6  bg-stone-950">
-            <TbPaperBag size={50} />
+          <div className="fixed top-2 -right-28 rounded-full p-6  bg-stone-950">
+            <TbPaperBag size={45} />
             <CartBadge />
           </div>
         </Link>
