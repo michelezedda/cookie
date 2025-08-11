@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CartBadge from "./CartBadge";
+import { TbPaperBag } from "react-icons/tb";
 
 const Navbar = () => {
   return (
@@ -13,12 +14,7 @@ const Navbar = () => {
         <div className="fixed top-6 -left-28 bg-stone-950 w-22 h-20 rotate-50 rounded-b-full" />
         <Link to={"/cart"}>
           <div className="fixed top-1 -right-28 rounded-full p-6  bg-stone-950">
-            <lord-icon
-              src="https://cdn.lordicon.com/zmvzumis.json"
-              trigger="hover"
-              colors="primary:#ffffff"
-              style={{ width: "50px", height: "50px" }}
-            />
+            <TbPaperBag size={50} />
             <CartBadge />
           </div>
         </Link>

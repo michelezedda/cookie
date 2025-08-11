@@ -1,4 +1,4 @@
-export type CartItem = Cookie & { quantity?: number };
+export type CartItem = Cookie & { quantity: number };
 
 export type UserData = {
   firstName: string;
@@ -35,6 +35,7 @@ export type CartStore = {
   cartQuantity: () => number;
   addQuantity: (itemId: number) => void;
   removeItem: (itemId: number) => void;
+  totalPrice: () => number;
   order: any[];
   setOrder: (order: any[]) => void;
 };

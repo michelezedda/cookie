@@ -1,5 +1,6 @@
 import { useCart } from "../../store/cartStore";
 import type { SuggestedCardProps } from "../../types/types";
+import { TbPaperBag } from "react-icons/tb";
 
 const SuggestedCard = ({ cookie }: SuggestedCardProps) => {
   const addToCart = useCart((state) => state.addToCart);
@@ -22,12 +23,7 @@ const SuggestedCard = ({ cookie }: SuggestedCardProps) => {
         className="flex gap-4 justify-center items-center rounded-2xl bg-[#a57431]/50 hover:brightness-150 duration-300 cursor-pointer w-full shadow py-1 active:scale-98"
         onClick={() => addToCart(cookie)}
       >
-        <lord-icon
-          src="https://cdn.lordicon.com/zmvzumis.json"
-          state="hover-shopping-bag-2"
-          colors="primary:#a57431"
-          style={{ width: "35px", height: "35px" }}
-        />
+        <TbPaperBag size={35} />
         {cookie.discount !== 0 ? (
           <div className="flex gap-2 justify-center items-center">
             <p className="text-lg line-through text-white/30">

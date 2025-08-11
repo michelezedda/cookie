@@ -16,13 +16,13 @@ const Promo = () => {
           pic={sugarCookie.pic}
           name="20% Off Now On Sugar Cookies"
           description="Rock your taste buds with our cookies."
-          onClick={() => addToCart(sugarCookie)}
+          onClick={() => addToCart({ ...sugarCookie, quantity: 1 })}
         />
         <PromoCard
           pic={lemonZestCookie.pic}
           name="15% Off Now On Lemon Zest Cookies"
           description="Rock your taste buds with our cookies."
-          onClick={() => addToCart(lemonZestCookie)}
+          onClick={() => addToCart({ ...lemonZestCookie, quantity: 1 })}
         />
       </div>
     </div>

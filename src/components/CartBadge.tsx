@@ -4,7 +4,7 @@ const CartBadge = () => {
   const cartQuantity = useCart((state) => state.cartQuantity());
 
   return (
-    <div className="absolute top-6 right-4 -z-1 text-md">
+    <div className="absolute top-6 right-3 -z-1 text-md">
       {cartQuantity > 0 && cartQuantity}
     </div>
   );

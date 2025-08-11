@@ -7,7 +7,7 @@ import CartCard from "./CartCard";
 import { useState } from "react";
 
 const Cart = () => {
-  const { cart } = useCart();
+  const { cart, totalPrice } = useCart();
   const [formVisible, setFormVisible] = useState<boolean>(false);
 
   return (
@@ -22,7 +22,9 @@ const Cart = () => {
             <CartCard key={cookie.id} cookie={cookie} />
           ))}
         </div>
-        <p className="text-2xl text-end mx-4 mt-6">Total: $</p>
+        <p className="text-2xl text-end mx-4 mt-6">
+          Total: $ {totalPrice().toFixed(2)}
+        </p>
         <AddMore />
         {formVisible ? (
           <CheckoutForm />

@@ -38,6 +38,8 @@ export const useCart = create<CartStore>((set, get) => ({
         )
         .filter((item) => item.quantity > 0),
     })),
+  totalPrice: () =>
+    get().cart.reduce((total, item) => total + item.price * item.quantity, 0),
   order: [],
   setOrder: (order) => set({ order }),
 }));
