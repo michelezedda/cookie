@@ -1,16 +1,21 @@
 import { locations } from "../../data/locations";
 import { useCart } from "../../store/cartStore";
 import { useForm } from "../../store/formStore";
+import { useNavigate } from "react-router";
 
 const CheckoutForm = () => {
   const { setSubmitted, formData, setFormData } = useForm();
-  const { setCart } = useCart();
+  const { cart, setCart, setOrder } = useCart();
+
+  let navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    setOrder(cart);
     setSubmitted(true);
     setCart([]);
+    navigate("/receipt");
   };
 
   return (

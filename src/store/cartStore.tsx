@@ -37,4 +37,6 @@ export const useCart = create((set, get) => ({
         )
         .filter((item) => item.quantity > 0),
     })),
+  order: [],
+  setOrder: (order) => set({ order }),
 }));

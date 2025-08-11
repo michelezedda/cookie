@@ -3,30 +3,13 @@ import Footer from "../../components/Footer";
 import CheckoutForm from "./CheckoutForm";
 import AddMore from "./AddMore";
 import { useCart } from "../../store/cartStore";
-import { useForm } from "../../store/formStore";
 import CartCard from "./CartCard";
 import { useState } from "react";
 
 const Cart = () => {
   const { cart } = useCart();
-  const { submitted } = useForm();
   const [formVisible, setFormVisible] = useState(false);
 
-  if (submitted) {
-    return (
-      <>
-        <Navbar />
-        <div className="flex flex-col my-44 p-4 gap-2 mx-4 min-h-screen">
-          <h1 className="text-center text-5xl font-[Caprasimo]">
-            Your order has been successfully submitted!
-          </h1>
-          <div className="mt-10">ORDER INFO</div>
-          <div className="mt-10">PICK UP DATE FROM TIME TO TIME</div>
-        </div>
-        <Footer />
-      </>
-    );
-  }
   return (
     <>
       <Navbar />
