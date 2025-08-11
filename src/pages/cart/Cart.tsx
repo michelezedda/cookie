@@ -4,12 +4,16 @@ import CheckoutForm from "./CheckoutForm";
 import AddMore from "./AddMore";
 import { useCart } from "../../store/cartStore";
 import CartCard from "./CartCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { cart, totalPrice } = useCart();
   const [formVisible, setFormVisible] = useState<boolean>(false);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   if (cart.length === 0) {
     return (
@@ -59,12 +63,13 @@ const Cart = () => {
         {formVisible ? (
           <CheckoutForm />
         ) : (
-          <button
+          <a
+            href="#checkout-form"
             className="flex gap-4 justify-center items-center rounded-2xl bg-[#a57431]/50 hover:brightness-150 duration-300 cursor-pointer shadow py-3 active:scale-98 text-xl mx-4 mt-12"
             onClick={() => setFormVisible(true)}
           >
             Continue
-          </button>
+          </a>
         )}
       </div>
       <Footer />

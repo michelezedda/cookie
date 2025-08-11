@@ -7,8 +7,13 @@ import Vegan from "./components/Vegan";
 import Promo from "./components/Promo";
 import SweetestDeals from "./components/SweetestDeals";
 import AllCookies from "./components/AllCookies";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <main>
       <Navbar />
