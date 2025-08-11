@@ -11,7 +11,7 @@ const cookies = [
     vegan: false,
     limited: false,
     discount: 20,
-    suggested: false,
+    suggested: true,
   },
   {
     id: 1,
@@ -123,7 +123,7 @@ const cookies = [
     vegan: true,
     limited: false,
     discount: 15,
-    suggested: false,
+    suggested: true,
   },
   {
     id: 9,
