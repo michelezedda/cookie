@@ -1,69 +1,81 @@
-# React + TypeScript + Vite
+<h1 align="center">
+  <br>
+  <img src="https://i.ibb.co/xqy71vmH/cookie-project.webp" alt="Cookie" width="300">
+  <br>
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2 align="center">Cookie: Freshly baked cookies, ready to order</h2> 
 
-Currently, two official plugins are available:
+## Introduction
+Cookie is an online cookie shop where users can explore delicious flavors, place their orders, and schedule pickups at their chosen location. With a modern design and smooth user experience, Cookie makes it easy for customers to enjoy fresh-baked treats with just a few clicks.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
 
-## Expanding the ESLint configuration
+- **Frontend:**
+  - React
+  - TypeScript
+  - Tailwind CSS
+  - Zustand (for state management)
+  - Vite (for faster builds and development)
+  - react-router-dom (for routing)
+  - react-icons (for UI icons)
+  - GSAP (for smooth animations)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Version Control:**
+  - Git
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Hosting:**
+  - Vercel (for deployment)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Live Demo
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+You can check out the live version of Cookie here: :link: [Cookie](https://cookie-cravings.vercel.app/)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To run Cookie locally, follow these steps:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- **Node.js** (>=16.x)
+- **npm** or **yarn**
+
+### Steps
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/michelezedda/cookie.git
+      
+2. Navigate into the project directory:
+
+    ```bash
+    cd cookie
+    ```
+
+3. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+    or if you're using Yarn:
+
+    ```bash
+    yarn install
+    ```
+
+4. Run the app locally:
+
+    ```bash
+    npm run dev
+    ```
+
+    or with Yarn:
+
+    ```bash
+    yarn dev
+    ```
+
