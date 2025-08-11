@@ -26,7 +26,7 @@ const Receipt = () => {
         <div id="receipt" className="mt-10">
           <div className="flex justify-center items-center">
             <img
-              src="/media/bw-logo.png"
+              src="/media/bw-logo.webp"
               alt="cookie logo black and white"
               className="w-30"
             />

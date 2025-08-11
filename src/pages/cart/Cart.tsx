@@ -24,12 +24,12 @@ const Cart = () => {
           <p className="text-xl">Your cart is empty</p>
           <div className="relative">
             <img
-              src="/media/five-cookies.png"
+              src="/media/five-cookies.webp"
               alt="cookies"
               className="w-50 mt-8"
             />
             <img
-              src="/media/crumbs.png"
+              src="/media/crumbs.webp"
               alt="cookie crumbs"
               className="absolute -bottom-18 w-500 -z-1"
             />

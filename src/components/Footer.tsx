@@ -1,25 +1,41 @@
+import locations from "../data/locations";
+
 const Footer = () => {
+  const firstColumnLocations = locations.filter(
+    (location) => location.id >= 0 && location.id <= 5
+  );
+  const secondColumnLocations = locations.filter(
+    (location) => location.id > 5 && location.id <= 13
+  );
+
   return (
-    <footer className="footer grid grid-cols-3 bg-stone-950 p-10 mt-25">
-      <div className="flex flex-col">
-        <h5 className="text-neutral-400 text-xl mb-1">Services</h5>
-        <a>Branding</a>
-        <a>Design</a>
-        <a>Marketing</a>
-        <a>Advertisement</a>
+    <footer className="footer grid grid-cols-2 bg-stone-950 p-10 mt-25">
+      <div className="flex flex-col gap-2">
+        <h5 className="text-neutral-400 text-xl mb-1">Our Locations</h5>
+        {firstColumnLocations.map((location) => (
+          <ul>
+            <li
+              key={location.id}
+              className="hover:brightness-70 cursor-pointer"
+            >
+              &#9679; {location.street}
+            </li>
+          </ul>
+        ))}
       </div>
-      <div className="flex flex-col">
-        <h5 className="text-neutral-400 text-xl mb-1">Company</h5>
-        <a>About us</a>
-        <a>Contact</a>
-        <a>Jobs</a>
-        <a>Press kit</a>
-      </div>
-      <div className="flex flex-col">
-        <h5 className="text-neutral-400 text-xl mb-1">Legal</h5>
-        <a>Terms of use</a>
-        <a>Privacy policy</a>
-        <a>Cookie policy</a>
+      <div className="flex flex-col gap-2">
+        <br />
+        {secondColumnLocations.map((location) => (
+          <ul>
+            <li
+              key={location.id}
+              className="hover:brightness-70 cursor-pointer"
+            >
+              {" "}
+              &#9679; {location.street}
+            </li>
+          </ul>
+        ))}
       </div>
     </footer>
   );

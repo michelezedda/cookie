@@ -37,7 +37,7 @@ function PromoCard({ pic, name, description, onClick }: PromoCardProps) {
       <div className="flex flex-col gap-2 justify-center items-start relative rounded-4xl shadow bg-stone-950 p-10 w-full">
         <h3 className="text-2xl">{name}</h3>
         <img
-          src="/media/crumbs.png"
+          src="/media/crumbs.webp"
           alt="cookie crumbs"
           className="absolute w-90 -bottom-36 -right-10"
         />

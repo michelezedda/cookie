@@ -26,13 +26,13 @@ const Hero = () => {
     >
       {/* Left cookie */}
       <img
-        src="/media/chips.png"
+        src="/media/chips.webp"
         alt="chocolate chips cookie"
         className="left-cookie absolute -left-14 lg:-left-16 top-10 md:top-20 w-40 md:w-50 2xl:w-70"
       />
       {/* Right cookie */}
       <img
-        src="/media/double-white.png"
+        src="/media/double-white.webp"
         alt="double white chocolate cookie"
         className="right-cookie absolute  -right-14 lg:-right-10 top-1/2 md:top-150 lg:top-170 w-40 md:w-50 2xl:w-70"
       />

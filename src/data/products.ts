@@ -4,7 +4,7 @@ const cookies = [
     name: "Sugar",
     description:
       "A classic buttery cookie with a sweet, crisp texture and a hint of vanilla.",
-    pic: "/media/sugar.png",
+    pic: "/media/sugar.webp",
     price: 10,
     calories: 150,
     new: false,
@@ -18,7 +18,7 @@ const cookies = [
     name: "Chocolate Chips",
     description:
       "Soft and chewy cookie loaded with rich, melty chocolate chips for the perfect treat.",
-    pic: "/media/chips.png",
+    pic: "/media/chips.webp",
     price: 12,
     calories: 220,
     new: false,
@@ -32,7 +32,7 @@ const cookies = [
     name: "Oatmeal Raisin",
     description:
       "Hearty oatmeal cookie studded with sweet raisins and a touch of cinnamon spice.",
-    pic: "/media/oatmeal.png",
+    pic: "/media/oatmeal.webp",
     price: 11,
     calories: 110,
     new: false,
@@ -46,7 +46,7 @@ const cookies = [
     name: "Peanut Butter",
     description:
       "Rich and crumbly peanut butter cookie with a slightly salty balance and classic criss-cross pattern.",
-    pic: "/media/pb.png",
+    pic: "/media/pb.webp",
     price: 13,
     calories: 250,
     new: false,
@@ -60,7 +60,7 @@ const cookies = [
     name: "Double Chocolate",
     description:
       "Decadent chocolate cookie with cocoa powder and chunks of dark and milk chocolate.",
-    pic: "/media/double.png",
+    pic: "/media/double.webp",
     price: 14,
     calories: 310,
     new: false,
@@ -74,7 +74,7 @@ const cookies = [
     name: "Snickerdoodle",
     description:
       "Soft cookie rolled in cinnamon sugar for a sweet and tangy flavor with a tender bite.",
-    pic: "/media/snickerdoodle.png",
+    pic: "/media/snickerdoodle.webp",
     price: 11,
     calories: 160,
     new: false,
@@ -88,7 +88,7 @@ const cookies = [
     name: "White Chocolate Macadamia",
     description:
       "Buttery cookie bursting with creamy white chocolate chunks and crunchy macadamia nuts.",
-    pic: "/media/white-macadamia.png",
+    pic: "/media/white-macadamia.webp",
     price: 15,
     calories: 210,
     new: false,
@@ -102,7 +102,7 @@ const cookies = [
     name: "Gingerbread",
     description:
       "Spiced ginger cookie with molasses and warming spices, perfect for festive occasions.",
-    pic: "/media/gingerbread.png",
+    pic: "/media/gingerbread.webp",
     price: 12,
     calories: 130,
     new: true,
@@ -116,7 +116,7 @@ const cookies = [
     name: "Lemon Zest",
     description:
       "Refreshing cookie infused with zesty lemon and a hint of sweetness for a bright flavor.",
-    pic: "/media/lemon.png",
+    pic: "/media/lemon.webp",
     price: 11,
     calories: 90,
     new: false,
@@ -130,7 +130,7 @@ const cookies = [
     name: "Smarties®",
     description:
       "Colorful and crunchy candy-coated chocolate pieces baked into a soft, chewy cookie for a playful and sweet treat.",
-    pic: "/media/smarties.png",
+    pic: "/media/smarties.webp",
     price: 13,
     calories: 180,
     new: true,
@@ -143,7 +143,7 @@ const cookies = [
     id: 10,
     name: "Almond Biscotti",
     description: "Crunchy twice-baked Italian cookie with toasted almonds",
-    pic: "/media/almond-biscotti.png",
+    pic: "/media/almond-biscotti.webp",
     price: 12,
     calories: 80,
     new: false,
@@ -157,7 +157,7 @@ const cookies = [
     name: "Chocolate Brownie",
     description:
       "Dense and fudgy chocolate brownie cookie that melts in your mouth, rich with cocoa flavor.",
-    pic: "/media/brownie.png",
+    pic: "/media/brownie.webp",
     price: 15,
     calories: 220,
     new: false,
@@ -171,7 +171,7 @@ const cookies = [
     name: "Ghost",
     description:
       "A spooky-themed sugar cookie with vanilla flavor and festive icing decorations, perfect for Halloween.",
-    pic: "/media/ghost.png",
+    pic: "/media/ghost.webp",
     price: 15,
     calories: 140,
     new: true,
@@ -185,7 +185,7 @@ const cookies = [
     name: "Double White Chocolate",
     description:
       "Sweet cookie packed with double the white chocolate chunks for an extra creamy, buttery bite.",
-    pic: "/media/double-white.png",
+    pic: "/media/double-white.webp",
     price: 12,
     calories: 280,
     new: false,
