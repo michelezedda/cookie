@@ -6,7 +6,7 @@ const CookieCard = ({ cookie }: CookieCardProps) => {
   const addToCart = useCart((state) => state.addToCart);
 
   return (
-    <div className="relative flex flex-col justify-end items-center text-center bg-stone-950 shadow-lg rounded-4xl p-6 h-115 w-80 gap-3">
+    <div className="relative flex flex-col justify-end items-center text-center bg-gradient-to-t from-stone-900/20 via-stone-900/70 to-stone-900/70  shadow-lg rounded-4xl p-6 h-115 w-80 gap-3">
       <img
         src={cookie.pic}
         alt={cookie.name}
@@ -24,20 +24,20 @@ const CookieCard = ({ cookie }: CookieCardProps) => {
       )}
       <div className="absolute top-34 grid grid-cols-2 gap-4 w-[90%]">
         {cookie.vegan && (
-          <span className="bg-green-950 px-3 py-1 rounded-full">Vegan</span>
+          <span className="bg-green-900 px-3 py-1 rounded-full">Vegan</span>
         )}
         {cookie.calories <= 120 && (
-          <span className="bg-purple-950 px-3 py-1 rounded-full">
+          <span className="bg-purple-900 px-3 py-1 rounded-full">
             Low calories
           </span>
         )}
         {cookie.limited && (
-          <span className="bg-blue-950 px-3 py-1 rounded-full">
+          <span className="bg-blue-900 px-3 py-1 rounded-full">
             Limited Ed.
           </span>
         )}
         {cookie.discount !== 0 && (
-          <span className="bg-red-950 px-3 py-1 rounded-full">Sale</span>
+          <span className="bg-red-900 px-3 py-1 rounded-full">Sale</span>
         )}
       </div>
       <div className="flex flex-col absolute top-58 mx-4">

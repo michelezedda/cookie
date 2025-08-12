@@ -1,12 +1,8 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
-import NewProducts from "./components/NewProducts";
-import LowCalories from "./components/LowCalories";
-import Vegan from "./components/Vegan";
 import Promo from "./components/Promo";
-import SweetestDeals from "./components/SweetestDeals";
-import AllCookies from "./components/AllCookies";
+import CategorySelection from "./components/categories/CategorySelection";
 import { useEffect } from "react";
 import { useApp } from "./store/appStore";
 
@@ -23,11 +19,7 @@ const Home = () => {
       <Hero />
       <div className="mx-auto max-w-screen-xl">
         <Promo />
-        <NewProducts />
-        <SweetestDeals />
-        <LowCalories />
-        <Vegan />
-        <AllCookies />
+        <CategorySelection />
       </div>
       <Footer />
     </main>
