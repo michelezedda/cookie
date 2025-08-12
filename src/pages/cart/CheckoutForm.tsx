@@ -2,10 +2,11 @@ import { locations } from "../../data/locations";
 import { useCart } from "../../store/cartStore";
 import { useForm } from "../../store/formStore";
 import { useNavigate } from "react-router";
+import { IoIosClose } from "react-icons/io";
 import type { Location } from "../../types/types";
 
 const CheckoutForm = () => {
-  const { setSubmitted, formData, setFormData } = useForm();
+  const { setSubmitted, formData, setFormData, setFormVisible } = useForm();
   const { cart, setCart, setOrder } = useCart();
 
   let navigate = useNavigate();
@@ -21,11 +22,20 @@ const CheckoutForm = () => {
 
   return (
     <>
-      <div id="checkout-form">
-        <h2 className="text-center mt-26 mb-4 text-3xl font-[Caprasimo]">
-          Pick-up info
-        </h2>
-        <form className="flex flex-col  p-4 gap-2 rounded-4xl border-4 mx-4 border-stone-400">
+      <div
+        id="checkout-form"
+        className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-stone-950/90"
+      >
+        <div className="relative border-2 border-white rounded max-h-[95vh] overflow-y-auto" />
+        <form className="relative flex flex-col p-4 gap-2 rounded-4xl border-4 mx-4 border-stone-400 bg-stone-950 lg:w-200">
+          <IoIosClose
+            size={40}
+            className="absolute top-3 right-5 text-white active:scale-95 cursor-pointer"
+            onClick={() => setFormVisible(false)}
+          />
+          <h2 className="text-center mt-10 mb-4 text-3xl font-[Caprasimo]">
+            Pick-up info
+          </h2>
           <label htmlFor="fullName">Full name</label>
           <input
             type="text"
@@ -113,6 +123,7 @@ const CheckoutForm = () => {
           />
           <input
             type="submit"
+            value="Submit"
             className="flex mt-4 gap-4 justify-center items-center rounded-2xl bg-[#a57431]/50 hover:brightness-150 duration-300 cursor-pointer shadow py-3 active:scale-98 w-full text-xl"
             onClick={handleSubmit}
           />

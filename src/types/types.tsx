@@ -49,6 +49,8 @@ export type FormStore = {
   setFormData: (formData: UserData) => void;
   submitted: boolean;
   setSubmitted: (submitted: boolean) => void;
+  formVisible: boolean;
+  setFormVisible: (formVisible: boolean) => void;
 };
 
 export type CookieCardProps = {

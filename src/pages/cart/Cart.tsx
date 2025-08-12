@@ -4,14 +4,15 @@ import CheckoutForm from "./CheckoutForm";
 import AddMore from "./AddMore";
 import { useCart } from "../../store/cartStore";
 import CartCard from "./CartCard";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useApp } from "../../store/appStore";
+import { useForm } from "../../store/formStore";
 
 const Cart = () => {
   const { cart, totalPrice } = useCart();
+  const { formVisible, setFormVisible } = useForm();
   const scrollToTop = useApp((state) => state.scrollToTop);
-  const [formVisible, setFormVisible] = useState<boolean>(false);
 
   useEffect(() => {
     scrollToTop();
@@ -49,34 +50,28 @@ const Cart = () => {
   return (
     <>
       <Navbar />
-      <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center my-40 lg:my-10 mx-auto max-w-screen-2xl">
-        <div className="flex flex-col">
+      <div className="grid grid-cols-1 xl:grid-cols-2 justify-center xl:gap-10 my-50 xl:my-10 mx-auto max-w-screen-2xl">
+        <div className="flex flex-col mx-4 xl:mt-42">
           <h1 className="text-5xl font-[Caprasimo] mb-6 text-center">
             Your Cart
           </h1>
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col items-center">
             {cart.map((cookie) => (
               <CartCard key={cookie.id} cookie={cookie} />
             ))}
           </div>
-          <p className="text-2xl text-end mx-4 mt-6">
-            Total: $ {totalPrice().toFixed(2)}
-          </p>
-        </div>
-        <div className="flex flex-col">
-          <AddMore />
-        </div>
-        {formVisible ? (
-          <CheckoutForm />
-        ) : (
+          <div className="flex flex-col mx-4 text-end mt-6 px-4 xl:w-full">
+            <p className="text-2xl">Total: $ {totalPrice().toFixed(2)}</p>
+          </div>
           <a
-            href="#checkout-form"
-            className="flex gap-4 justify-center items-center rounded-2xl bg-[#a57431]/50 hover:brightness-150 duration-300 cursor-pointer shadow py-3 active:scale-98 text-xl mx-4 mt-12"
+            className="flex gap-4 justify-center rounded-2xl bg-[#a57431]/50 hover:brightness-150 duration-300 cursor-pointer shadow py-3 active:scale-98 text-xl mt-12 w-full"
             onClick={() => setFormVisible(true)}
           >
             Continue
           </a>
-        )}
+        </div>
+        <AddMore />
+        {formVisible && <CheckoutForm />}
       </div>
       <Footer />
     </>

@@ -4,7 +4,7 @@ import type { CartCardProps } from "../../types/types";
 const CartCard = ({ cookie }: CartCardProps) => {
   const { addQuantity, removeItem } = useCart();
   return (
-    <div className="flex justify-between border-b border-stone-950 p-4 bg-gradient-to-t from-[#a57431]/10 to-[#181713]">
+    <div className="flex justify-between border-b border-stone-950 p-4 bg-gradient-to-t from-[#a57431]/10 to-[#181713] w-full">
       <div className="flex gap-6">
         <img src={cookie.pic} alt={cookie.name} className="w-25" />
         <div className="flex flex-col gap-1">

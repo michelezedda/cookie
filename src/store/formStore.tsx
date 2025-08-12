@@ -13,6 +13,8 @@ export const useForm = create<FormStore>((set) => ({
   setFormData: (formData) => set({ formData }),
   submitted: false,
   setSubmitted: (submitted) => set({ submitted }),
+  formVisible: false,
+  setFormVisible: (formVisible) => set({ formVisible }),
 }));
 
 // import { create } from "zustand";
