@@ -8,10 +8,13 @@ import Promo from "./components/Promo";
 import SweetestDeals from "./components/SweetestDeals";
 import AllCookies from "./components/AllCookies";
 import { useEffect } from "react";
+import { useApp } from "./store/appStore";
 
 const Home = () => {
+  const scrollToTop = useApp((state) => state.scrollToTop);
+
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollToTop();
   }, []);
 
   return (

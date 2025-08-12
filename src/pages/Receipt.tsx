@@ -3,11 +3,14 @@ import Footer from "../components/Footer";
 import { useCart } from "../store/cartStore";
 import { useForm } from "../store/formStore";
 import { useNavigate } from "react-router";
+import { useApp } from "../store/appStore";
+import { useEffect } from "react";
 
 const Receipt = () => {
   const { order } = useCart();
   const { formData } = useForm();
   const orderId = Date.now();
+  const scrollToTop = useApp((state) => state.scrollToTop);
 
   let navigate = useNavigate();
 
@@ -15,6 +18,10 @@ const Receipt = () => {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
+
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   return (
     <>

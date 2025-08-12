@@ -26,7 +26,7 @@ const CookieCard = ({ cookie }: CookieCardProps) => {
         {cookie.vegan && (
           <span className="bg-green-950 px-3 py-1 rounded-full">Vegan</span>
         )}
-        {cookie.calories <= 150 && (
+        {cookie.calories <= 120 && (
           <span className="bg-purple-950 px-3 py-1 rounded-full">
             Low calories
           </span>

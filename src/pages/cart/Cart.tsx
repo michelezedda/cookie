@@ -6,20 +6,22 @@ import { useCart } from "../../store/cartStore";
 import CartCard from "./CartCard";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useApp } from "../../store/appStore";
 
 const Cart = () => {
   const { cart, totalPrice } = useCart();
+  const scrollToTop = useApp((state) => state.scrollToTop);
   const [formVisible, setFormVisible] = useState<boolean>(false);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollToTop();
   }, []);
 
   if (cart.length === 0) {
     return (
       <>
         <Navbar />
-        <div className="flex flex-col justift-center items-center my-40 mx-auto max-w-screen-md min-h-screen">
+        <div className="flex flex-col items-center my-40 mx-auto max-w-screen-md min-h-screen">
           <h1 className="text-5xl font-[Caprasimo] mb-8">Your Cart</h1>
           <p className="text-xl">Your cart is empty</p>
           <div className="relative">
@@ -47,19 +49,23 @@ const Cart = () => {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col my-40 mx-auto max-w-screen-md">
-        <h1 className="text-5xl font-[Caprasimo] mb-6 text-center">
-          Your Cart
-        </h1>
-        <div className="flex flex-col w-full">
-          {cart.map((cookie) => (
-            <CartCard key={cookie.id} cookie={cookie} />
-          ))}
+      <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center my-40 lg:my-10 mx-auto max-w-screen-2xl">
+        <div className="flex flex-col">
+          <h1 className="text-5xl font-[Caprasimo] mb-6 text-center">
+            Your Cart
+          </h1>
+          <div className="flex flex-col w-full">
+            {cart.map((cookie) => (
+              <CartCard key={cookie.id} cookie={cookie} />
+            ))}
+          </div>
+          <p className="text-2xl text-end mx-4 mt-6">
+            Total: $ {totalPrice().toFixed(2)}
+          </p>
         </div>
-        <p className="text-2xl text-end mx-4 mt-6">
-          Total: $ {totalPrice().toFixed(2)}
-        </p>
-        <AddMore />
+        <div className="flex flex-col">
+          <AddMore />
+        </div>
         {formVisible ? (
           <CheckoutForm />
         ) : (

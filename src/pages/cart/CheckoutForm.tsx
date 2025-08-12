@@ -22,10 +22,10 @@ const CheckoutForm = () => {
   return (
     <>
       <div id="checkout-form">
-        <h2 className="text-center mt-10 mb-4 text-3xl font-[Caprasimo]">
+        <h2 className="text-center mt-26 mb-4 text-3xl font-[Caprasimo]">
           Pick-up info
         </h2>
-        <form className="flex flex-col p-4 gap-2 rounded-4xl border-4 mx-4 border-stone-400">
+        <form className="flex flex-col  p-4 gap-2 rounded-4xl border-4 mx-4 border-stone-400">
           <label htmlFor="fullName">Full name</label>
           <input
             type="text"

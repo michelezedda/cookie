@@ -28,6 +28,10 @@ export type Location = {
   street: string;
 };
 
+export type AppStore = {
+  scrollToTop: () => void;
+};
+
 export type CartStore = {
   cart: CartItem[];
   setCart: (cart: CartItem[]) => void;

@@ -34,7 +34,7 @@ export default Promo;
 function PromoCard({ pic, name, description, onClick }: PromoCardProps) {
   return (
     <>
-      <div className="flex flex-col gap-2 justify-center items-start relative rounded-4xl shadow bg-stone-950 p-10 w-full">
+      <div className="flex flex-col gap-2 justify-center items-start relative rounded-4xl shadow-lg bg-gradient-to-tl from-yellow-950/10 to-stone-950 p-10 w-full">
         <h3 className="text-2xl">{name}</h3>
         <img
           src="/media/crumbs.webp"
@@ -48,7 +48,7 @@ function PromoCard({ pic, name, description, onClick }: PromoCardProps) {
         />
         <p className="text-stone-500">{description}</p>
         <button
-          className="flex mt-10 gap-4 justify-center items-center rounded-2xl bg-[#a57431]/50 hover:brightness-150 duration-300 cursor-pointer px-6 shadow py-2 text-xl active:scale-98"
+          className="flex mt-10 gap-4 justify-center items-center rounded-2xl bg-[#a57431]/50 hover:brightness-150 duration-300 cursor-pointer px-6 shadow py-2 text-xl active:scale-98 z-10"
           onClick={onClick}
         >
           Order Now

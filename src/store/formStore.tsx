@@ -14,3 +14,20 @@ export const useForm = create<FormStore>((set) => ({
   submitted: false,
   setSubmitted: (submitted) => set({ submitted }),
 }));
+
+// import { create } from "zustand";
+// import type { FormStore } from "../types/types";
+
+// export const useForm = create<FormStore>((set) => ({
+//   formData: {
+//     firstName: "",
+//     lastName: "",
+//     location: "",
+//     email: "",
+//     phoneNumber: "",
+//     date: "",
+//   },
+//   setFormData:
+//   submitted:
+//   setSubmitted:
+// }));
