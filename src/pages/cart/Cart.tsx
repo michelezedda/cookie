@@ -26,16 +26,7 @@ const Cart = () => {
           <h1 className="text-5xl font-[Caprasimo] mb-8">Your Cart</h1>
           <p className="text-xl">Your cart is empty</p>
           <div className="relative">
-            <img
-              src="/media/five-cookies.webp"
-              alt="cookies"
-              className="w-50 mt-8"
-            />
-            <img
-              src="/media/crumbs.webp"
-              alt="cookie crumbs"
-              className="absolute -bottom-18 w-500 -z-1"
-            />
+            <img src="/media/dog.webp" alt="dog" className="w-50 mt-8" />
           </div>
           <Link to={"/"}>
             <button className="flex gap-4 justify-center items-center rounded-2xl bg-[#a57431]/50 hover:brightness-150 duration-300 cursor-pointer shadow py-3 active:scale-98 text-xl mx-4 mt-14 px-4">
