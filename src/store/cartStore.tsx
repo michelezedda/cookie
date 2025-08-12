@@ -55,17 +55,3 @@ export const useCart = create<CartStore>()(
     }
   )
 );
-
-// import { create } from "zustand";
-// import type { CartStore } from "../types/types";
-
-// export const useCart = create<CartStore>((set, get) => ({
-//   cart:
-//   setCart:
-//   addToCart:
-//   cartQuantity:
-//   removeItem:
-//   totalPrice:
-//   order:
-//   setOrder:
-// }));
