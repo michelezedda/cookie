@@ -20,7 +20,7 @@ const CategorySelection = () => {
 
   return (
     <div className="bg-stone-950 mx-4 rounded-4xl shadow-lg mt-35">
-      <nav className="flex justify-center w-full p-10 transform transition-transform duration-300 ease-in-out translate-x-0 left-0">
+      <nav className="flex justify-center w-full p-10">
         <ul className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2 xl:text-xl">
           {categories.map((category) => (
             <li
@@ -33,7 +33,7 @@ const CategorySelection = () => {
           ))}
         </ul>
       </nav>
-      <div className="py-20"> {category}</div>
+      <div className="py-10"> {category}</div>
     </div>
   );
 };
