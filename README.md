@@ -15,7 +15,7 @@ Cookie is an online cookie shop where users can explore delicious flavors, place
   - React
   - TypeScript
   - Tailwind CSS
-  - Zustand (for state management persisting client-side data)
+  - Zustand (for state management and persisting client-side data)
   - Vite (for faster builds and development)
   - react-router-dom (for routing)
   - react-icons (for UI icons)
