@@ -13,19 +13,19 @@ const CategorySelection = () => {
     { id: 0, title: "All", component: <AllCookies /> },
     { id: 1, title: "New", component: <NewProducts /> },
     { id: 2, title: "Vegan", component: <Vegan /> },
-    { id: 3, title: "Low Calories", component: <LowCalories /> },
-    { id: 5, title: "Limited Editions", component: <LimitedEd /> },
+    { id: 3, title: "Low Cal.", component: <LowCalories /> },
+    { id: 5, title: "Limited Ed.", component: <LimitedEd /> },
     { id: 5, title: "Deals", component: <SweetestDeals /> },
   ];
 
   return (
     <div className="bg-stone-950 mx-4 rounded-4xl shadow-lg mt-35">
-      <nav className="flex justify-center w-full shadow-lg bg-stone-900/50 rounded-4xl">
-        <ul className="flex gap-1">
+      <nav className="flex justify-center w-full p-10 transform transition-transform duration-300 ease-in-out translate-x-0 left-0">
+        <ul className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2 xl:text-xl">
           {categories.map((category) => (
             <li
               key={category.title}
-              className="bg-stone-900 p-4 rounded-4xl cursor-pointer active:scale-98"
+              className="flex justify-center cursor-pointer p-4 rounded-4xl w-40 bg-stone-900/70 hover:text-[#a57431] hover:brightness-110 duration-300 active:scale-98"
               onClick={() => setCategory(category.component)}
             >
               {category.title}
