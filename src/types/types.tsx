@@ -59,7 +59,7 @@ export type FormStore = {
 };
 
 export type CookieCardProps = {
-  cartItem: CartItem;
+  cookie: CartItem;
 };
 
 export type PromoCardProps = {
