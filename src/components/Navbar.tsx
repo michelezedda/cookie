@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import CartBadge from "./CartBadge";
-import { TbPaperBag, TbUserSquareRounded } from "react-icons/tb";
+import { TbPaperBag } from "react-icons/tb";
 
 const Navbar = () => {
   return (
