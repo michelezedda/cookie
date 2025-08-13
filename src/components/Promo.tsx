@@ -34,7 +34,7 @@ export default Promo;
 function PromoCard({ pic, name, description, onClick }: PromoCardProps) {
   return (
     <>
-      <div className="flex flex-col gap-2 justify-center items-start relative rounded-4xl shadow-lg bg-gradient-to-tl from-stone-900 to-stone-950 p-10 w-full">
+      <div className="flex flex-col gap-2 justify-center items-start relative rounded-4xl shadow-lg shadow-black bg-gradient-to-tl from-stone-900 to-stone-950 p-10 w-full">
         <h3 className="text-2xl">{name}</h3>
         <img
           src="/media/crumbs.webp"

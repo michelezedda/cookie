@@ -6,7 +6,7 @@ const CookieCard = ({ cookie }: CookieCardProps) => {
   const addToCart = useCart((state) => state.addToCart);
 
   return (
-    <div className="relative flex flex-col justify-end items-center text-center bg-gradient-to-t from-stone-900/20 via-stone-900/70 to-stone-900/70  shadow-lg rounded-4xl p-6 h-115 w-80 gap-3">
+    <div className="relative flex flex-col justify-end items-center text-center bg-gradient-to-t from-stone-900 via-stone-900 to-stone-800 shadow-lg shadow-black rounded-4xl p-6 h-115 w-80 gap-3">
       <img
         src={cookie.pic}
         alt={cookie.name}

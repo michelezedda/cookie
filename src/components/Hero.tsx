@@ -15,8 +15,8 @@ const Hero = () => {
           scrub: true,
         },
       })
-      .to(".right-cookie", { y: 200, x: 70 }, 0)
-      .to(".left-cookie", { y: 200, x: -70 }, 0);
+      .to(".right-cookie", { y: 300, x: 70 }, 0)
+      .to(".left-cookie", { y: 300, x: -70 }, 0);
   }, []);
 
   return (
@@ -28,17 +28,17 @@ const Hero = () => {
       <img
         src="/media/chips.webp"
         alt="chocolate chips cookie"
-        className="left-cookie absolute -left-14 lg:-left-16 top-10 md:top-20 lg:-top-5 w-40 md:w-50 2xl:w-70"
+        className="left-cookie absolute -left-20 lg:-left-16 top-14 md:top-20 lg:-top-5 2xl:top-20 w-40 md:w-50 2xl:w-80"
       />
       {/* Right cookie */}
       <img
         src="/media/double-white.webp"
         alt="double white chocolate cookie"
-        className="right-cookie absolute -right-14 lg:-right-10 top-1/2 md:top-150 lg:top-25 2xl:top-100 w-40 md:w-50 2xl:w-70"
+        className="right-cookie absolute -right-20 lg:-right-10 top-50 md:top-160 lg:top-25 2xl:top-150 w-40 md:w-50 2xl:w-80"
       />
       <div className="mx-auto max-w-screen-lg relative">
         <div className="flex flex-col lg:flex-row m-4">
-          <h1 className="text-6xl text-white font-[Caprasimo]">
+          <h1 className="text-[100px] leading-24 text-white font-[Caprasimo]">
             Get A <br />
             <span className="ml-10 bg-gradient-to-t from-[#a57431] to-white bg-clip-text text-transparent">
               Craving

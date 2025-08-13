@@ -38,9 +38,10 @@ const Receipt = () => {
               className="w-30"
             />
           </div>
-          <h2 className="mb-1 mt-10 border-b font-medium">
-            ORDER N. <span className="font-bold">{orderId}</span>
-          </h2>
+          <h2 className="text-center text-lg mt-10">Thanks for your order!</h2>
+          <h3 className="mb-1 mt-6 border-b font-medium">
+            ORDER #<span className="font-bold">{orderId}</span>
+          </h3>
           {order.map((orderItem) => (
             <div className="flex justify-between" key={orderItem.id}>
               <p>
@@ -51,10 +52,26 @@ const Receipt = () => {
             </div>
           ))}
           <div className="flex flex-col">
-            <h2 className="mb-1 border-b font-medium mt-6">TOTAL</h2>
+            <h3 className="mb-1 border-b font-medium mt-6">TOTAL AMOUNT</h3>
             <span className="text-end">$ {totalPrice.toFixed(2)}</span>
           </div>
-          <h2 className="mb-1 border-b font-medium mt-6">PICK UP</h2>
+          <h3 className="mb-1 border-b font-medium mt-6">
+            CUSTOMER INFORMATION
+          </h3>
+          <p>
+            Name:{" "}
+            <span className="font-semibold">
+              {formData.firstName} {formData.lastName}
+            </span>
+          </p>
+          <p>
+            Phone number:{" "}
+            <span className="font-semibold">{formData.phoneNumber}</span>
+          </p>
+          <p>
+            E-mail: <span className="font-semibold">{formData.email}</span>
+          </p>
+          <h3 className="mb-1 border-b font-medium mt-6">PICK UP DETAILS</h3>
           <p>
             Your order will be ready to pick up on{" "}
             <span className="font-semibold">{formData.date}</span> from{" "}
@@ -62,8 +79,11 @@ const Receipt = () => {
             <span className="font-semibold">7 PM</span> at{" "}
             <span className="font-semibold">Cookie {formData.location}</span>
           </p>
-          <h2 className="mb-1 border-b font-medium mt-6">PAYMENT</h2>
+          <h3 className="mb-1 border-b font-medium mt-6">PAYMENT METHOD</h3>
           <p>Payment is made directly in the store</p>
+          <p className="text-end mt-10">
+            {new Date().toLocaleDateString()} {new Date().toLocaleTimeString()}
+          </p>
         </div>
         <button
           className="flex gap-4 justify-center items-center rounded-2xl bg-[#a57431]/50 hover:brightness-150 duration-300 cursor-pointer shadow py-3 active:scale-98 text-xl mx-4 mt-12 w-[50%]"
