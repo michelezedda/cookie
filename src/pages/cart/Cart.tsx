@@ -47,8 +47,8 @@ const Cart = () => {
             Your Cart
           </h1>
           <div className="flex flex-col items-center">
-            {cart.map((cookie) => (
-              <CartCard key={cookie.id} cookie={cookie} />
+            {cart.map((cartItem) => (
+              <CartCard key={cartItem.id} cartItem={cartItem} />
             ))}
           </div>
           <div className="flex flex-col mx-4 text-end mt-6 px-4 xl:w-full">

@@ -1,5 +1,10 @@
 export type CartItem = Cookie & { quantity: number };
 
+export type Order = {
+  id: number | string;
+  order: CartItem[];
+};
+
 export type UserData = {
   firstName: string;
   lastName: string;
@@ -40,8 +45,8 @@ export type CartStore = {
   addQuantity: (itemId: number) => void;
   removeItem: (itemId: number) => void;
   totalPrice: () => number;
-  order: any[];
-  setOrder: (order: any[]) => void;
+  order: CartItem[];
+  setOrder: (order: CartItem[]) => void;
 };
 
 export type FormStore = {
@@ -54,7 +59,7 @@ export type FormStore = {
 };
 
 export type CookieCardProps = {
-  cookie: CartItem;
+  cartItem: CartItem;
 };
 
 export type PromoCardProps = {
@@ -65,9 +70,16 @@ export type PromoCardProps = {
 };
 
 export type CartCardProps = {
-  cookie: CartItem;
+  cartItem: CartItem;
 };
 
 export type SuggestedCardProps = {
   cookie: CartItem;
+};
+
+export type ReceiptCardProps = {
+  order: CartItem[];
+  orderId: number;
+  total: number;
+  formData: UserData;
 };
