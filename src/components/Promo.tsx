@@ -10,7 +10,7 @@ const Promo = () => {
 
   if (!sugarCookie || !lemonZestCookie) return null;
   return (
-    <div className="mt-10 mx-4 flex justify-center items-center">
+    <section className="mt-10 mx-4 flex justify-center items-center">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-25 gap-x-10">
         <PromoCard
           pic={sugarCookie.pic}
@@ -25,7 +25,7 @@ const Promo = () => {
           onClick={() => addToCart({ ...lemonZestCookie, quantity: 1 })}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

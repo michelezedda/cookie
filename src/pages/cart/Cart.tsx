@@ -22,7 +22,7 @@ const Cart = () => {
     return (
       <>
         <Navbar />
-        <div className="flex flex-col items-center my-40 mx-auto max-w-screen-md min-h-screen">
+        <main className="flex flex-col items-center my-40 mx-auto max-w-screen-md min-h-screen">
           <h1 className="text-5xl font-[Caprasimo] mb-8">Your Cart</h1>
           <p className="text-xl">Your cart is empty</p>
           <div className="relative">
@@ -33,7 +33,7 @@ const Cart = () => {
               Add something to your cart
             </button>
           </Link>
-        </div>
+        </main>
         <Footer />
       </>
     );
@@ -41,8 +41,8 @@ const Cart = () => {
   return (
     <>
       <Navbar />
-      <div className="grid grid-cols-1 xl:grid-cols-2 justify-center xl:gap-10 my-50 xl:my-10 mx-auto max-w-screen-2xl">
-        <div className="flex flex-col mx-4 xl:mt-42">
+      <main className="grid grid-cols-1 xl:grid-cols-2 justify-center xl:gap-10 my-50 xl:my-10 mx-auto max-w-screen-2xl">
+        <section className="flex flex-col mx-4 xl:mt-42">
           <h1 className="text-5xl font-[Caprasimo] mb-6 text-center">
             Your Cart
           </h1>
@@ -60,10 +60,10 @@ const Cart = () => {
           >
             Continue
           </a>
-        </div>
+        </section>
         <AddMore />
         {formVisible && <CheckoutForm />}
-      </div>
+      </main>
       <Footer />
     </>
   );

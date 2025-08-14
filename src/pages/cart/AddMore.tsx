@@ -5,7 +5,7 @@ const AddMore = () => {
   const suggestions = cookies.filter((cookie) => cookie.suggested);
 
   return (
-    <div
+    <section
       id="add-more"
       className="flex flex-col justify-center items-center mt-15 lg:pt-25 w-full px-4"
     >
@@ -15,7 +15,7 @@ const AddMore = () => {
           <SuggestedCard key={cookie.id} cookie={{ ...cookie, quantity: 1 }} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

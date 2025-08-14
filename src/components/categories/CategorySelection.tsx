@@ -27,7 +27,7 @@ const CategorySelection = () => {
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: "category-selection",
+          trigger: "#category-selection",
           start: "top top",
           end: "bottom top",
           scrub: true,
@@ -38,21 +38,21 @@ const CategorySelection = () => {
   }, []);
 
   return (
-    <div
+    <section
       id="category-selection"
-      className="relative bg-stone-950 mx-4 rounded-4xl shadow-lg mt-35"
+      className="relative bg-stone-950 mx-4 rounded-4xl shadow-lg mt-35 min-h-400"
     >
       {/* Left cookie */}
       <img
         src="/media/white-macadamia.webp"
         alt="white chocolate macadamia cookie"
-        className="left-cookie hidden 2xl:flex 2xl:absolute 2xl:left-30 2xl:top-45 2xl:w-80 -z-1"
+        className="left-cookie hidden 2xl:flex 2xl:absolute 2xl:left-15 2xl:top-45 2xl:w-80 -z-1"
       />
       {/* Right cookie */}
       <img
         src="/media/smarties.webp"
         alt="smarties cookie"
-        className="right-cookie hidden 2xl:flex 2xl:absolute 2xl:right-30 2xl:top-200 2xl:w-80 -z-1"
+        className="right-cookie hidden 2xl:flex 2xl:absolute 2xl:right-10 2xl:top-200 2xl:w-80 -z-1"
       />
       <nav className="flex justify-center w-full p-10">
         <ul className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2 xl:text-xl">
@@ -68,7 +68,7 @@ const CategorySelection = () => {
         </ul>
       </nav>
       <div className="py-10"> {category}</div>
-    </div>
+    </section>
   );
 };
 

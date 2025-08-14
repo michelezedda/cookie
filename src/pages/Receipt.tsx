@@ -32,7 +32,7 @@ const Receipt = () => {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col items-center my-44 p-4 gap-2 mx-auto min-h-screen max-w-screen-sm">
+      <main className="flex flex-col items-center my-44 p-4 gap-2 mx-auto min-h-screen max-w-screen-sm">
         <h1 className="text-center text-4xl font-[Caprasimo]">
           Your order has been successfully submitted!
         </h1>
@@ -48,7 +48,7 @@ const Receipt = () => {
         >
           Make a new order
         </button>
-      </div>
+      </main>
       <Footer />
     </>
   );
