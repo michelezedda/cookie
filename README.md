@@ -1,4 +1,4 @@
-<img width="2294" height="1339" alt="cookie3" src="https://github.com/user-attachments/assets/ddd3ead9-6e0e-49bb-9173-4f32283b689c" /><h1 align="center">
+<h1 align="center">
   <br>
   <img src="https://i.ibb.co/qLP4Mj3g/cookie-project.png" alt="Cookie">
   <br>
