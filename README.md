@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://i.ibb.co/qLP4Mj3g/cookie-project.png" alt="Cookie">
+<img width="2294" height="4728" alt="cookie1" src="https://github.com/user-attachments/assets/97469059-96c3-4d2d-8a09-92f75ac5db29" />
   <br>
 </h1>
 
@@ -82,7 +82,7 @@ Make sure you have the following installed on your machine:
     
     ## Screenshots
    <div align="center">
-!<img width="2294" height="4728" alt="cookie1" src="https://github.com/user-attachments/assets/97469059-96c3-4d2d-8a09-92f75ac5db29" />
+<img width="2294" height="4728" alt="cookie1" src="https://github.com/user-attachments/assets/97469059-96c3-4d2d-8a09-92f75ac5db29" />
 <img width="2294" height="1339" alt="cookie2" src="https://github.com/user-attachments/assets/53eb60ff-f9ec-443c-8289-305d82f3e972" />
 <img width="2294" height="1339" alt="cookie3" src="https://github.com/user-attachments/assets/acdfa77e-d3dd-4011-9e7f-660703456851" />
 <img width="2294" height="1991" alt="cookie4" src="https://github.com/user-attachments/assets/839722e5-4527-4262-b917-4369cbbeec3f" />
