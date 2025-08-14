@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://i.ibb.co/1GzfMkkS/cookie-project.png" alt="Cookie">
+  <img src="https://i.ibb.co/qLP4Mj3g/cookie-project.png" alt="Cookie">
   <br>
 </h1>
 
