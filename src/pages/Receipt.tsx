@@ -8,23 +8,25 @@ import { useCart } from "../store/cartStore";
 import { useForm } from "../store/formStore";
 
 const Receipt = () => {
+  // Get submitted order and form data
   const { order } = useCart();
   const { formData } = useForm();
+  // Scroll-to-top function from app store
   const scrollToTop = useApp((state) => state.scrollToTop);
-
+  // React Router navigate function
   let navigate = useNavigate();
-
+  // Generate a unique order ID (timestamp)
   const orderId = Date.now();
-
+  // Calculate total price of the order
   const totalPrice = order.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   );
-
+  // Navigate back to homepage for a new order
   const handleClick = () => {
     navigate("/");
   };
-
+  // Scroll to top when component mounts
   useEffect(() => {
     scrollToTop();
   }, []);

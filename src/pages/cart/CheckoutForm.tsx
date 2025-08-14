@@ -6,11 +6,13 @@ import { IoIosClose } from "react-icons/io";
 import type { Location } from "../../types/types";
 
 const CheckoutForm = () => {
+  // Form store methods and data
   const { setSubmitted, formData, setFormData, setFormVisible } = useForm();
+  // Cart store methods and data
   const { cart, setCart, setOrder } = useCart();
-
+  // Navigation instance
   let navigate = useNavigate();
-
+  // Handles form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -27,7 +29,9 @@ const CheckoutForm = () => {
         className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-stone-950/90"
       >
         <div className="relative border-2 border-white rounded max-h-[95vh] overflow-y-auto" />
+        {/* Form container */}
         <form className="relative flex flex-col p-4 gap-2 rounded-4xl border-4 mx-4 border-stone-400 bg-stone-950 lg:w-200">
+          {/* Close form button */}
           <IoIosClose
             size={40}
             className="absolute top-3 right-5 text-white active:scale-95 cursor-pointer"
@@ -36,6 +40,7 @@ const CheckoutForm = () => {
           <h2 className="text-center mt-10 mb-4 text-3xl font-[Caprasimo]">
             Pick-up info
           </h2>
+          {/* Full name */}
           <label htmlFor="fullName">Full name</label>
           <input
             type="text"
@@ -59,6 +64,7 @@ const CheckoutForm = () => {
             className="border-white border rounded-lg px-2 py-1"
             required
           />
+          {/* Email */}
           <label htmlFor="email">Your email</label>
           <input
             type="text"
@@ -71,6 +77,7 @@ const CheckoutForm = () => {
             className="border-white border rounded-lg px-2 py-1"
             required
           />
+          {/* Phone number (only digits, spaces, +, (), -) */}
           <label htmlFor="phoneNumber">Phone number</label>
           <input
             type="tel"
@@ -87,6 +94,7 @@ const CheckoutForm = () => {
             className="border-white border rounded-lg px-2 py-1"
             required
           />
+          {/* Location selection */}
           <label htmlFor="location">Location</label>
           <select
             name="location"
@@ -111,7 +119,8 @@ const CheckoutForm = () => {
               </option>
             ))}
           </select>
-          <label htmlFor="date">Date</label>
+          {/* Pickup date (must be today or later) */}
+          <label htmlFor="date">Pick-up date</label>
           <input
             type="date"
             id="date"
@@ -121,6 +130,7 @@ const CheckoutForm = () => {
             min={new Date().toISOString().split("T")[0]}
             required
           />
+          {/* Submit button */}
           <input
             type="submit"
             value="Submit"

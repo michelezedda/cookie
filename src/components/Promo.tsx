@@ -5,6 +5,7 @@ import type { PromoCardProps } from "../types/types";
 const Promo = () => {
   const addToCart = useCart((state) => state.addToCart);
 
+  // Grab specific products by ID
   const sugarCookie = cookies.find((cookie) => cookie.id === 0);
   const lemonZestCookie = cookies.find((cookie) => cookie.id === 8);
 

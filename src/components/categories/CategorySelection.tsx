@@ -11,8 +11,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const CategorySelection = () => {
+  // Store currently selected category component
   const [category, setCategory] = useState(<AllCookies />);
-
+  // List of categories with titles and components
   const categories = [
     { id: 0, title: "All", component: <AllCookies /> },
     { id: 1, title: "New", component: <NewProducts /> },
@@ -21,6 +22,7 @@ const CategorySelection = () => {
     { id: 4, title: "Limited Ed.", component: <LimitedEd /> },
   ];
 
+  // GSAP scroll animation
   useGSAP(() => {
     gsap
       .timeline({
@@ -40,18 +42,19 @@ const CategorySelection = () => {
       id="category-selection"
       className="relative bg-stone-950 mx-4 rounded-4xl shadow-lg mt-35 min-h-400"
     >
-      {/* Left cookie */}
+      {/* Decorative left cookie image */}
       <img
         src="/media/white-macadamia.webp"
         alt="white chocolate macadamia cookie"
         className="left-cookie hidden 2xl:flex 2xl:absolute 2xl:left-15 2xl:top-45 2xl:w-80 -z-1"
       />
-      {/* Right cookie */}
+      {/* Decorative right cookie image */}
       <img
         src="/media/smarties.webp"
         alt="smarties cookie"
         className="right-cookie hidden 2xl:flex 2xl:absolute 2xl:right-10 2xl:top-200 2xl:w-80 -z-1"
       />
+      {/* Category navigation menu */}
       <nav className="flex justify-center w-full p-10">
         <ul className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2 xl:text-xl">
           {categories.map((category) => (
@@ -65,6 +68,7 @@ const CategorySelection = () => {
           ))}
         </ul>
       </nav>
+      {/* Render the selected category component */}
       <div className="py-10"> {category}</div>
     </section>
   );
