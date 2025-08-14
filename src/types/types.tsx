@@ -24,7 +24,6 @@ export type Cookie = {
   new: boolean;
   vegan: boolean;
   limited: boolean;
-  discount: number;
   suggested: boolean;
 };
 
@@ -59,7 +58,7 @@ export type FormStore = {
 };
 
 export type CookieCardProps = {
-  cookie: CartItem;
+  cookie: CartItem & { quantity: number };
 };
 
 export type PromoCardProps = {
