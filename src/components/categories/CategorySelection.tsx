@@ -2,7 +2,6 @@ import AllCookies from "./AllCookies";
 import NewProducts from "./NewProducts";
 import Vegan from "./Vegan";
 import LowCalories from "./LowCalories";
-import SweetestDeals from "./SweetestDeals";
 import { useState } from "react";
 import LimitedEd from "./LimitedEd";
 import gsap from "gsap";
@@ -19,8 +18,7 @@ const CategorySelection = () => {
     { id: 1, title: "New", component: <NewProducts /> },
     { id: 2, title: "Vegan", component: <Vegan /> },
     { id: 3, title: "Low Cal.", component: <LowCalories /> },
-    { id: 5, title: "Limited Ed.", component: <LimitedEd /> },
-    { id: 5, title: "Deals", component: <SweetestDeals /> },
+    { id: 4, title: "Limited Ed.", component: <LimitedEd /> },
   ];
 
   useGSAP(() => {

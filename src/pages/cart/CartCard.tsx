@@ -6,7 +6,7 @@ const CartCard = ({ cartItem }: CartCardProps) => {
   return (
     <div className="flex justify-between border-b border-stone-950 p-4 bg-gradient-to-t from-[#a57431]/10 to-[#181713] w-full">
       <div className="flex gap-6">
-        <img src={cartItem.pic} alt={cartItem.name} className="w-25" />
+        <img src={cartItem.pic} alt={cartItem.name} className="w-28" />
         <div className="flex flex-col gap-1">
           <h3 className="text-xl">{cartItem.name}</h3>
           <p className="text-stone-500">{cartItem.quantity} pcs</p>

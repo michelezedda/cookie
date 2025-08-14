@@ -49,18 +49,7 @@ const CookieCard = ({ cookie }: CookieCardProps) => {
         onClick={() => addToCart(cookie)}
       >
         <TbPaperBag size={35} />
-        {cookie.discount !== 0 ? (
-          <div className="flex gap-2 justify-center items-center">
-            <p className="text-xl line-through text-white/30">
-              $ {cookie.price}
-            </p>
-            <p className="text-3xl">
-              $ {(cookie.price * (1 - cookie.discount / 100)).toFixed(2)}
-            </p>
-          </div>
-        ) : (
-          <p className="text-3xl">$ {cookie.price}</p>
-        )}
+        <p className="text-3xl">$ {cookie.price}</p>
       </button>
     </div>
   );
