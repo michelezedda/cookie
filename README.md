@@ -79,3 +79,11 @@ Make sure you have the following installed on your machine:
     yarn dev
     ```
 
+    
+    ## Screenshots
+   <div align="center">
+<img src="https://i.ibb.co/Y4dRDvJv/cookie-cravings-vercel-app.png" width="500" />
+<img src="https://i.ibb.co/GvnXMPSd/cookie-cravings-vercel-app-1.png" width="500" />
+<img src="https://i.ibb.co/2RqBvM3/cookie-cravings-vercel-app-2.png" width="500" />
+<img src="https://i.ibb.co/0pySLJLH/cookie-cravings-vercel-app-3.png" width="500" />
+</div>
