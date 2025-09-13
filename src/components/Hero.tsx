@@ -40,7 +40,7 @@ const Hero = () => {
       {/* Hero text container */}
       <div className="mx-auto max-w-screen-lg relative">
         <div className="flex flex-col lg:flex-row m-4">
-          <h1 className="text-[90px] md:text-[100px] leading-24 text-white font-[Caprasimo]">
+          <h1 className="text-[90px] md:text-[100px] leading-24 text-white font-[Caprasimo] drop-shadow-[0_10px_10px_rgba(0,0,0,1)]">
             Get A <br />
             <span className="ml-10 bg-gradient-to-t from-[#a57431] to-white bg-clip-text text-transparent">
               Craving

@@ -12,11 +12,11 @@ const CookieCard = ({ cookie }: CookieCardProps) => {
       <img
         src={cookie.pic}
         alt={cookie.name}
-        className="w-50 absolute -top-25"
+        className="w-50 absolute -top-25 drop-shadow-[0_8px_8px_rgba(0,0,0,0.8)]"
       />
       {/* Calories info */}
       {cookie.calories && (
-        <p className="text-stone-500 absolute top-25">
+        <p className="text-stone-500 absolute top-27">
           {cookie.calories} kcals
         </p>
       )}
@@ -27,7 +27,7 @@ const CookieCard = ({ cookie }: CookieCardProps) => {
         </span>
       )}
       {/* Tags section (vegan, low calories, limited) */}
-      <div className="absolute top-34 grid grid-cols-2 gap-4 w-[90%]">
+      <div className="absolute top-36 grid grid-cols-2 gap-4 w-[90%]">
         {cookie.vegan && (
           <span className="bg-green-900 px-3 py-1 rounded-full">Vegan</span>
         )}

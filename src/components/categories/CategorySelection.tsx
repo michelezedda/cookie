@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const CategorySelection = () => {
   // Store currently selected category component
-  const [category, setCategory] = useState(<AllCookies />);
+  const [selectedCategory, setSelectedCategory] = useState(<AllCookies />);
   // List of categories with titles and components
   const categories = [
     { id: 0, title: "All", component: <AllCookies /> },
@@ -55,13 +55,13 @@ const CategorySelection = () => {
         className="right-cookie hidden 2xl:flex 2xl:absolute 2xl:right-10 2xl:top-200 2xl:w-80 -z-1"
       />
       {/* Category navigation menu */}
-      <nav className="flex justify-center w-full p-10">
+      <nav className="flex justify-center py-10">
         <ul className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2 xl:text-xl">
           {categories.map((category) => (
             <li
-              key={category.title}
+              key={category.id}
               className="flex justify-center cursor-pointer p-4 rounded-4xl w-40 bg-stone-900/70 hover:text-[#a57431] hover:brightness-110 duration-300 active:scale-98"
-              onClick={() => setCategory(category.component)}
+              onClick={() => setSelectedCategory(category.component)}
             >
               {category.title}
             </li>
@@ -69,7 +69,7 @@ const CategorySelection = () => {
         </ul>
       </nav>
       {/* Render the selected category component */}
-      <div className="py-10"> {category}</div>
+      <div className="py-10">{selectedCategory}</div>
     </section>
   );
 };

@@ -45,7 +45,7 @@ function PromoCard({ pic, name, description, onClick }: PromoCardProps) {
         <img
           src={pic}
           alt={name}
-          className="absolute w-50 -bottom-16 right-2"
+          className="absolute w-50 -bottom-16 right-2 drop-shadow-[0_10px_10px_rgba(0,0,0,1)]"
         />
         <p className="text-stone-500">{description}</p>
         <button
