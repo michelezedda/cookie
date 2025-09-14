@@ -29,13 +29,13 @@ const Hero = () => {
       <img
         src="/media/chips.webp"
         alt="chocolate chips cookie"
-        className="left-cookie absolute -left-20 lg:-left-16 top-14 md:top-20 lg:-top-5 2xl:top-20 w-40 md:w-50 2xl:w-80"
+        className="left-cookie absolute -left-20 lg:-left-16 top-14 md:top-20 lg:-top-5 2xl:top-20 w-40 md:w-50 2xl:w-80 drop-shadow-[0_10px_10px_rgba(0,0,0,1)]"
       />
       {/* Right decorative cookie */}
       <img
         src="/media/double-white.webp"
         alt="double white chocolate cookie"
-        className="right-cookie absolute -right-20 lg:-right-10 top-50 md:top-160 lg:top-25 2xl:top-150 w-40 md:w-50 2xl:w-80"
+        className="right-cookie absolute -right-20 lg:-right-10 top-50 md:top-160 lg:top-25 2xl:top-150 w-40 md:w-50 2xl:w-80 drop-shadow-[0_10px_10px_rgba(0,0,0,1)]"
       />
       {/* Hero text container */}
       <div className="mx-auto max-w-screen-lg relative">
