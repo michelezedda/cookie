@@ -46,13 +46,13 @@ const CategorySelection = () => {
       <img
         src="/media/white-macadamia.webp"
         alt="white chocolate macadamia cookie"
-        className="left-cookie hidden 2xl:flex 2xl:absolute 2xl:left-15 2xl:top-45 2xl:w-80 -z-1"
+        className="left-cookie hidden 2xl:flex 2xl:absolute 2xl:left-15 2xl:top-45 2xl:w-80 -z-1 drop-shadow-[0_10px_10px_rgba(0,0,0,1)]"
       />
       {/* Decorative right cookie image */}
       <img
         src="/media/smarties.webp"
         alt="smarties cookie"
-        className="right-cookie hidden 2xl:flex 2xl:absolute 2xl:right-10 2xl:top-200 2xl:w-80 -z-1"
+        className="right-cookie hidden 2xl:flex 2xl:absolute 2xl:right-10 2xl:top-200 2xl:w-80 -z-1 drop-shadow-[0_10px_10px_rgba(0,0,0,1)]"
       />
       {/* Category navigation menu */}
       <nav className="flex justify-center py-10">

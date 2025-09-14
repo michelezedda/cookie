@@ -5,7 +5,7 @@ import { TbPaperBag } from "react-icons/tb";
 const Navbar = () => {
   return (
     // Main navigation bar container
-    <nav className="fixed flex top-0 h-10 left-1/2 -translate-x-1/2 bg-stone-950 w-115 p-4 justify-center items-center z-50 rounded-b-4xl">
+    <nav className="fixed flex top-0 h-10 left-1/2 -translate-x-1/2 bg-stone-950 w-115 p-4 justify-center items-center z-50 rounded-b-4xl drop-shadow-[0_5px_5px_rgba(0,0,0,0.4)]">
       {/* Center logo container */}
       <div className="fixed -top-3 left-1/2 -translate-x-1/2 bg-stone-950 p-6 rounded-b-full">
         <Link to={"/"}>
