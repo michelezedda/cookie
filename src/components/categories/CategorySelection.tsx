@@ -12,7 +12,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const CategorySelection = () => {
   // Store currently selected category component
-  const [selectedCategory, setSelectedCategory] = useState(<AllCookies />);
+  const [selectedCategory, setSelectedCategory] = useState({
+    id: 0,
+    title: "All",
+    component: <AllCookies />,
+  });
   // List of categories with titles and components
   const categories = [
     { id: 0, title: "All", component: <AllCookies /> },
@@ -60,8 +64,16 @@ const CategorySelection = () => {
           {categories.map((category) => (
             <li
               key={category.id}
-              className="flex justify-center cursor-pointer p-4 rounded-4xl w-40 bg-stone-900/70 hover:text-[#a57431] hover:brightness-110 duration-300 active:scale-98"
-              onClick={() => setSelectedCategory(category.component)}
+              className={`flex justify-center cursor-pointer p-4 rounded-4xl w-40 bg-stone-900/70 hover:text-[#a57431] hover:brightness-110 duration-300 active:scale-98 ${
+                selectedCategory.id === category.id && "text-[#a57431]"
+              }`}
+              onClick={() =>
+                setSelectedCategory({
+                  id: category.id,
+                  title: category.title,
+                  component: category.component,
+                })
+              }
             >
               {category.title}
             </li>
@@ -69,7 +81,7 @@ const CategorySelection = () => {
         </ul>
       </nav>
       {/* Render the selected category component */}
-      <div className="py-10">{selectedCategory}</div>
+      <div className="py-10">{selectedCategory.component}</div>
     </section>
   );
 };
