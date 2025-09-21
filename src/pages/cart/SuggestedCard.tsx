@@ -1,6 +1,7 @@
 import { useCart } from "../../store/cartStore";
 import type { SuggestedCardProps } from "../../types/types";
 import { TbPaperBag } from "react-icons/tb";
+import { formatMoney } from "../../utils/money.js";
 
 const SuggestedCard = ({ cookie }: SuggestedCardProps) => {
   // Access addToCart function from Zustand store
@@ -31,7 +32,7 @@ const SuggestedCard = ({ cookie }: SuggestedCardProps) => {
       >
         {/* Bag icon and price */}
         <TbPaperBag size={35} />
-        <p className="text-2xl">$ {cookie.price}</p>
+        <p className="text-2xl">{formatMoney(cookie.price)}</p>
       </button>
     </div>
   );

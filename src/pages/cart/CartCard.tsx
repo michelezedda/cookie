@@ -1,5 +1,6 @@
 import { useCart } from "../../store/cartStore";
 import type { CartCardProps } from "../../types/types";
+import { formatMoney } from "../../utils/money.js";
 
 const CartCard = ({ cartItem }: CartCardProps) => {
   // Extract functions from Zustand cart store for updating quantity or removing items
@@ -33,7 +34,7 @@ const CartCard = ({ cartItem }: CartCardProps) => {
         {/* Total price for this product (unit price × quantity) */}
       </div>
       <p className="text-xl">
-        $ {(cartItem.price * cartItem.quantity).toFixed(2)}
+        {formatMoney(cartItem.price * cartItem.quantity)}
       </p>
     </div>
   );

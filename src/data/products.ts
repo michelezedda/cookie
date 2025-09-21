@@ -5,7 +5,7 @@ const cookies = [
     description:
       "A classic buttery cookie with a sweet, crisp texture and a hint of vanilla.",
     pic: "/media/sugar.webp",
-    price: 10,
+    price: 1000,
     calories: 150,
     new: false,
     vegan: false,
@@ -18,7 +18,7 @@ const cookies = [
     description:
       "Soft and chewy cookie loaded with rich, melty chocolate chips for the perfect treat.",
     pic: "/media/chips.webp",
-    price: 12,
+    price: 1200,
     calories: 220,
     new: false,
     vegan: false,
@@ -31,7 +31,7 @@ const cookies = [
     description:
       "Hearty oatmeal cookie studded with sweet raisins and a touch of cinnamon spice.",
     pic: "/media/oatmeal.webp",
-    price: 11,
+    price: 1100,
     calories: 110,
     new: false,
     vegan: true,
@@ -44,7 +44,7 @@ const cookies = [
     description:
       "Rich and crumbly peanut butter cookie with a slightly salty balance and classic criss-cross pattern.",
     pic: "/media/pb.webp",
-    price: 13,
+    price: 1300,
     calories: 250,
     new: false,
     vegan: true,
@@ -57,7 +57,7 @@ const cookies = [
     description:
       "Decadent chocolate cookie with cocoa powder and chunks of dark and milk chocolate.",
     pic: "/media/double.webp",
-    price: 14,
+    price: 1400,
     calories: 310,
     new: false,
     vegan: false,
@@ -70,7 +70,7 @@ const cookies = [
     description:
       "Soft cookie rolled in cinnamon sugar for a sweet and tangy flavor with a tender bite.",
     pic: "/media/snickerdoodle.webp",
-    price: 11,
+    price: 1100,
     calories: 160,
     new: false,
     vegan: false,
@@ -83,7 +83,7 @@ const cookies = [
     description:
       "Buttery cookie bursting with creamy white chocolate chunks and crunchy macadamia nuts.",
     pic: "/media/white-macadamia.webp",
-    price: 15,
+    price: 1500,
     calories: 210,
     new: false,
     vegan: false,
@@ -96,7 +96,7 @@ const cookies = [
     description:
       "Spiced ginger cookie with molasses and warming spices, perfect for festive occasions.",
     pic: "/media/gingerbread.webp",
-    price: 12,
+    price: 1200,
     calories: 130,
     new: true,
     vegan: true,
@@ -109,7 +109,7 @@ const cookies = [
     description:
       "Refreshing cookie infused with zesty lemon and a hint of sweetness for a bright flavor.",
     pic: "/media/lemon.webp",
-    price: 11,
+    price: 1100,
     calories: 90,
     new: false,
     vegan: true,
@@ -122,7 +122,7 @@ const cookies = [
     description:
       "Colorful and crunchy candy-coated chocolate pieces baked into a soft, chewy cookie for a playful and sweet treat.",
     pic: "/media/smarties.webp",
-    price: 13,
+    price: 1300,
     calories: 180,
     new: true,
     vegan: false,
@@ -134,7 +134,7 @@ const cookies = [
     name: "Almond Biscotti",
     description: "Crunchy twice-baked Italian cookie with toasted almonds",
     pic: "/media/almond-biscotti.webp",
-    price: 12,
+    price: 1200,
     calories: 80,
     new: false,
     vegan: true,
@@ -147,7 +147,7 @@ const cookies = [
     description:
       "Dense and fudgy chocolate brownie cookie that melts in your mouth, rich with cocoa flavor.",
     pic: "/media/brownie.webp",
-    price: 15,
+    price: 1500,
     calories: 220,
     new: false,
     vegan: false,
@@ -160,7 +160,7 @@ const cookies = [
     description:
       "A spooky-themed sugar cookie with vanilla flavor and festive icing decorations, perfect for Halloween.",
     pic: "/media/ghost.webp",
-    price: 15,
+    price: 1500,
     calories: 140,
     new: true,
     vegan: false,
@@ -173,7 +173,7 @@ const cookies = [
     description:
       "Sweet cookie packed with double the white chocolate chunks for an extra creamy, buttery bite.",
     pic: "/media/double-white.webp",
-    price: 12,
+    price: 1200,
     calories: 280,
     new: false,
     vegan: false,

@@ -1,4 +1,5 @@
 import type { ReceiptCardProps } from "../types/types";
+import { formatMoney } from "../utils/money.js";
 
 const ReceiptCard = ({ order, orderId, total, formData }: ReceiptCardProps) => {
   return (
@@ -25,13 +26,13 @@ const ReceiptCard = ({ order, orderId, total, formData }: ReceiptCardProps) => {
               <span className="mr-1">{orderItem.quantity}x</span>
               {orderItem.name}
             </p>
-            <p>$ {(orderItem.price * orderItem.quantity).toFixed(2)}</p>
+            <p>{formatMoney(orderItem.price * orderItem.quantity)}</p>
           </div>
         ))}
         {/* Total price */}
         <div className="flex flex-col">
           <h3 className="mb-1 border-b font-medium mt-6">TOTAL AMOUNT</h3>
-          <span className="text-end">$ {total.toFixed(2)}</span>
+          <span className="text-end">{formatMoney(total)}</span>
         </div>
         {/* Customer details */}
         <h3 className="mb-1 border-b font-medium mt-6">CUSTOMER INFORMATION</h3>

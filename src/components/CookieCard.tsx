@@ -1,6 +1,7 @@
 import { useCart } from "../store/cartStore";
 import type { CookieCardProps } from "../types/types";
 import { TbPaperBag } from "react-icons/tb";
+import { formatMoney } from "../utils/money.js";
 
 const CookieCard = ({ cookie }: CookieCardProps) => {
   // Get addToCart function from store
@@ -53,7 +54,7 @@ const CookieCard = ({ cookie }: CookieCardProps) => {
         onClick={() => addToCart(cookie)}
       >
         <TbPaperBag size={35} />
-        <p className="text-3xl">$ {cookie.price}</p>
+        <p className="text-3xl">{formatMoney(cookie.price)}</p>
       </button>
     </div>
   );

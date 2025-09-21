@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useApp } from "../../store/appStore";
 import { useForm } from "../../store/formStore";
+import { formatMoney } from "../../utils/money.js";
 
 const Cart = () => {
   // Access cart items and price calculation from store
@@ -61,7 +62,7 @@ const Cart = () => {
           </div>
           {/* Total price */}
           <div className="flex flex-col mx-4 text-end mt-6 px-4 xl:w-full">
-            <p className="text-2xl">Total: $ {totalPrice().toFixed(2)}</p>
+            <p className="text-2xl">Total: {formatMoney(totalPrice())}</p>
           </div>
           {/* Continue button triggers checkout form */}
           <a
