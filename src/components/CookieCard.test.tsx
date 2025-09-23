@@ -1,22 +1,26 @@
-import { it, expect, describe } from "vitest";
+import { it, expect, describe, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import CookieCard from "./CookieCard";
 import { useCart } from "../store/cartStore";
 
-const cookie = {
-  id: 0,
-  name: "Sugar",
-  description:
-    "A classic buttery cookie with a sweet, crisp texture and a hint of vanilla.",
-  pic: "/media/sugar.webp",
-  price: 1000,
-  calories: 150,
-  new: false,
-  vegan: false,
-  limited: false,
-  suggested: true,
-};
+let cookie;
+
+beforeEach(() => {
+  cookie = {
+    id: 0,
+    name: "Sugar",
+    description:
+      "A classic buttery cookie with a sweet, crisp texture and a hint of vanilla.",
+    pic: "/media/sugar.webp",
+    price: 1000,
+    calories: 150,
+    new: false,
+    vegan: false,
+    limited: false,
+    suggested: true,
+  };
+});
 
 describe("CookieCard component", () => {
   it("displays the cookie details correctly", () => {
