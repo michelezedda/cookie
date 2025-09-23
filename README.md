@@ -17,6 +17,7 @@ Cookie is an online cookie shop where users can explore delicious flavors, place
   - Tailwind CSS
   - Zustand (for state management and persisting client-side data)
   - Vite (for faster builds and development)
+  - Vitest (for unit and component testing)
   - react-router-dom (for routing)
   - react-icons (for UI icons)
   - GSAP (for smooth animations)
