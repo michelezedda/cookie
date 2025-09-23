@@ -1,26 +1,26 @@
-import { it, expect, describe, vi } from "vitest";
+import { it, expect, describe } from "vitest";
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import CookieCard from "./CookieCard";
+import { useCart } from "../store/cartStore";
+
+const cookie = {
+  id: 0,
+  name: "Sugar",
+  description:
+    "A classic buttery cookie with a sweet, crisp texture and a hint of vanilla.",
+  pic: "/media/sugar.webp",
+  price: 1000,
+  calories: 150,
+  new: false,
+  vegan: false,
+  limited: false,
+  suggested: true,
+};
 
 describe("CookieCard component", () => {
   it("displays the cookie details correctly", () => {
-    const cookie = {
-      id: 0,
-      name: "Sugar",
-      description:
-        "A classic buttery cookie with a sweet, crisp texture and a hint of vanilla.",
-      pic: "/media/sugar.webp",
-      price: 1000,
-      calories: 150,
-      new: false,
-      vegan: false,
-      limited: false,
-      suggested: true,
-    };
-
-    const mock = vi.fn();
-
-    render(<CookieCard cookie={cookie} mock={mock} />);
+    render(<CookieCard cookie={cookie} />);
 
     expect(
       screen.getByText(
@@ -34,5 +34,17 @@ describe("CookieCard component", () => {
       "src",
       "/media/sugar.webp"
     );
+  });
+
+  it("adds a cookie to the cart", async () => {
+    render(<CookieCard cookie={cookie} />);
+
+    const user = userEvent.setup();
+    const addToCartButton = screen.getByTestId("add-to-cart-button");
+    await user.click(addToCartButton);
+
+    const { cart } = useCart.getState();
+    expect(cart).toHaveLength(1);
+    expect(cart[0]).toMatchObject({ id: 0, quantity: 1 });
   });
 });

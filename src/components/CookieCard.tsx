@@ -52,6 +52,7 @@ const CookieCard = ({ cookie }: CookieCardProps) => {
       {/* Add to cart button */}
       <button
         className="flex gap-4 justify-center items-center rounded-2xl bg-[#a57431]/50 hover:brightness-150 duration-300 cursor-pointer w-full shadow py-2 active:scale-98"
+        data-testid="add-to-cart-button"
         onClick={() => addToCart(cookie)}
       >
         <TbPaperBag size={35} />
