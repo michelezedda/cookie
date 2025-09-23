@@ -13,6 +13,7 @@ const CookieCard = ({ cookie }: CookieCardProps) => {
       <img
         src={cookie.pic}
         alt={cookie.name}
+        data-testid="cookie-image"
         className="w-50 absolute -top-25 drop-shadow-[0_8px_8px_rgba(0,0,0,0.8)]"
       />
       {/* Calories info */}
