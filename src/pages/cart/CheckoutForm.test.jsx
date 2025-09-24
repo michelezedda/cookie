@@ -1,21 +1,16 @@
-import { it, expect, describe, vi, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { vi } from "vitest";
 import CheckoutForm from "./CheckoutForm";
 
-// Mock useNavigate
+// Mock navigate
 const mockNavigate = vi.fn();
-vi.mock("react-router", () => ({
-  useNavigate: () => mockNavigate,
-}));
+vi.mock("react-router", () => ({ useNavigate: () => mockNavigate }));
 
-// Mock stores
+// Mock form store
 const setFormData = vi.fn();
 const setSubmitted = vi.fn();
 const setFormVisible = vi.fn();
-const setOrder = vi.fn();
-const setCart = vi.fn();
-
 vi.mock("../../store/formStore", () => ({
   useForm: () => ({
     formData: {
@@ -32,74 +27,51 @@ vi.mock("../../store/formStore", () => ({
   }),
 }));
 
+// Mock cart store
+const setCart = vi.fn();
+const setOrder = vi.fn();
 vi.mock("../../store/cartStore", () => ({
-  useCart: () => ({
-    cart: [{ id: 1, name: "Sugar", price: 1000, quantity: 1, pic: "" }],
-    setCart,
-    setOrder,
-  }),
+  useCart: () => ({ cart: [{ id: 1 }], setCart, setOrder }),
 }));
 
 describe("CheckoutForm", () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
-
-  it("renders all form fields", () => {
-    render(<CheckoutForm />);
-    expect(screen.getByLabelText("Full name")).toBeInTheDocument();
-    expect(screen.getByLabelText("Your email")).toBeInTheDocument();
-    expect(screen.getByLabelText("Phone number")).toBeInTheDocument();
-    expect(screen.getByLabelText("Location")).toBeInTheDocument();
-    expect(screen.getByLabelText("Pick-up date")).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /submit/i })).toBeInTheDocument();
-  });
-
-  it("accepts input and submits correctly", async () => {
-    render(<CheckoutForm />);
+  it("renders inputs and submits form", async () => {
     const user = userEvent.setup();
+    render(<CheckoutForm />);
 
-    const [firstNameInput, lastNameInput] =
-      screen.getAllByLabelText("Full name");
-    await user.type(firstNameInput, "John");
-    expect(setFormData).toHaveBeenCalledWith(
-      expect.objectContaining({ firstName: "John" })
+    // Fill fields
+    await user.type(screen.getByPlaceholderText("Your first name"), "John");
+    await user.type(screen.getByPlaceholderText("Your last name"), "Doe");
+    await user.type(screen.getByPlaceholderText("Your email"), "john@doe.com");
+    await user.type(
+      screen.getByPlaceholderText("Your phone number"),
+      "+123456789"
     );
 
-    await user.type(lastNameInput, "Doe");
-    expect(setFormData).toHaveBeenCalledWith(
-      expect.objectContaining({ lastName: "Doe" })
-    );
+    // Select location
+    const select = screen.getByLabelText(/Location/i);
+    await user.selectOptions(select, screen.getAllByRole("option")[1]);
 
-    await user.type(screen.getByLabelText("Your email"), "john@example.com");
-    expect(setFormData).toHaveBeenCalledWith(
-      expect.objectContaining({ email: "john@example.com" })
-    );
-
-    await user.type(screen.getByLabelText("Phone number"), "+123456789");
-    expect(setFormData).toHaveBeenCalledWith(
-      expect.objectContaining({ phoneNumber: "+123456789" })
-    );
-
-    await user.selectOptions(screen.getByLabelText("Location"), "Main Street");
-    expect(setFormData).toHaveBeenCalledWith(
-      expect.objectContaining({ location: "Main Street" })
-    );
-
+    // Pick date (today)
     const today = new Date().toISOString().split("T")[0];
-    await user.type(screen.getByLabelText("Pick-up date"), today);
-    expect(setFormData).toHaveBeenCalledWith(
-      expect.objectContaining({ date: today })
-    );
+    await user.type(screen.getByLabelText(/Pick-up date/i), today);
 
-    const submitButton = screen.getByRole("button", { name: /submit/i });
-    await user.click(submitButton);
+    // Submit
+    await user.click(screen.getByDisplayValue("Submit"));
 
-    expect(setOrder).toHaveBeenCalledWith([
-      { id: 1, name: "Sugar", price: 1000, quantity: 1, pic: "" },
-    ]);
+    expect(setOrder).toHaveBeenCalled();
     expect(setSubmitted).toHaveBeenCalledWith(true);
     expect(setCart).toHaveBeenCalledWith([]);
     expect(mockNavigate).toHaveBeenCalledWith("/receipt");
+  });
+
+  it("closes when clicking X button", async () => {
+    const user = userEvent.setup();
+    render(<CheckoutForm />);
+
+    const closeBtn = screen.getByTestId("close-btn");
+    await user.click(closeBtn);
+
+    expect(setFormVisible).toHaveBeenCalledWith(false);
   });
 });

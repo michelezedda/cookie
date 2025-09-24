@@ -35,6 +35,7 @@ const CheckoutForm = () => {
           <IoIosClose
             size={40}
             className="absolute top-3 right-5 text-white active:scale-95 cursor-pointer"
+            data-testid="close-btn"
             onClick={() => setFormVisible(false)}
           />
           <h2 className="text-center mt-10 mb-4 text-3xl font-[Caprasimo]">
