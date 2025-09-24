@@ -41,11 +41,14 @@ describe("CheckoutForm", () => {
 
     // Fill fields
     await user.type(screen.getByPlaceholderText("Your first name"), "John");
-    await user.type(screen.getByPlaceholderText("Your last name"), "Doe");
-    await user.type(screen.getByPlaceholderText("Your email"), "john@doe.com");
+    await user.type(screen.getByPlaceholderText("Your last name"), "Smith");
+    await user.type(
+      screen.getByPlaceholderText("Your email"),
+      "john@smith.com"
+    );
     await user.type(
       screen.getByPlaceholderText("Your phone number"),
-      "+123456789"
+      "123456789"
     );
 
     // Select location

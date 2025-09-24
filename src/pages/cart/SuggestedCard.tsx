@@ -13,6 +13,7 @@ const SuggestedCard = ({ cookie }: SuggestedCardProps) => {
       <img
         src={cookie.pic}
         alt={cookie.name}
+        data-testid="cookie-image"
         className="w-34 absolute -top-18"
       />
       {/* Calories label */}
