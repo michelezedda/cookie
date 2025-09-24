@@ -1,7 +1,7 @@
 import { useCart } from "../../store/cartStore";
 import type { SuggestedCardProps } from "../../types/types";
 import { TbPaperBag } from "react-icons/tb";
-import { formatMoney } from "../../utils/money.js";
+import { formatMoney } from "../../utils/money";
 
 const SuggestedCard = ({ cookie }: SuggestedCardProps) => {
   // Access addToCart function from Zustand store

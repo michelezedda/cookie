@@ -1,7 +1,7 @@
 import { useCart } from "../store/cartStore";
 import type { CookieCardProps } from "../types/types";
 import { TbPaperBag } from "react-icons/tb";
-import { formatMoney } from "../utils/money.js";
+import { formatMoney } from "../utils/money.ts";
 
 const CookieCard = ({ cookie }: CookieCardProps) => {
   // Get addToCart function from store

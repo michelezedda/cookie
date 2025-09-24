@@ -1,6 +1,6 @@
 import { useCart } from "../../store/cartStore";
 import type { CartCardProps } from "../../types/types";
-import { formatMoney } from "../../utils/money.js";
+import { formatMoney } from "../../utils/money";
 
 const CartCard = ({ cartItem }: CartCardProps) => {
   // Extract functions from Zustand cart store for updating quantity or removing items

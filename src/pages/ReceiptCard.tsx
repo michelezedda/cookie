@@ -1,5 +1,5 @@
 import type { ReceiptCardProps } from "../types/types";
-import { formatMoney } from "../utils/money.js";
+import { formatMoney } from "../utils/money.ts";
 
 const ReceiptCard = ({ order, orderId, total, formData }: ReceiptCardProps) => {
   return (
